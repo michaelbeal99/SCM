@@ -1,0 +1,8 @@
+pydantic>=2.0
+ollama
+langgraph
+sqlmodel
+scikit-learn
+numpy
+pytest
+gradio
