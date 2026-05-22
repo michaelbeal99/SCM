@@ -1,0 +1,578 @@
+{"text": "has_close_elements([1.0, 2.0, 3.0], 0.5)", "source": "humaneval"}
+{"text": "separate_paren_groups('( ) (( )) (( )( ))')", "source": "humaneval"}
+{"text": "truncate_number(3.5)", "source": "humaneval"}
+{"text": "below_zero([1, 2, 3])", "source": "humaneval"}
+{"text": "mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])", "source": "humaneval"}
+{"text": "intersperse([], 4)", "source": "humaneval"}
+{"text": "parse_nested_parens('(()()) ((())) () ((())()())')", "source": "humaneval"}
+{"text": "filter_by_substring([], 'a')", "source": "humaneval"}
+{"text": "sum_product([])", "source": "humaneval"}
+{"text": "rolling_max([1, 2, 3, 2, 3, 4, 2])", "source": "humaneval"}
+{"text": "make_palindrome('')", "source": "humaneval"}
+{"text": "string_xor('010', '110')", "source": "humaneval"}
+{"text": "longest([])", "source": "humaneval"}
+{"text": "greatest_common_divisor(3, 5)", "source": "humaneval"}
+{"text": "all_prefixes('abc')", "source": "humaneval"}
+{"text": "string_sequence(0)", "source": "humaneval"}
+{"text": "count_distinct_characters('xyzXYZ')", "source": "humaneval"}
+{"text": "parse_music('o o| .| o| o| .| .| .| .| o o')", "source": "humaneval"}
+{"text": "how_many_times('', 'a')", "source": "humaneval"}
+{"text": "sort_numbers('three one five')", "source": "humaneval"}
+{"text": "find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])", "source": "humaneval"}
+{"text": "rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])", "source": "humaneval"}
+{"text": "filter_integers(['a', 3.14, 5])", "source": "humaneval"}
+{"text": "largest_divisor(15)", "source": "humaneval"}
+{"text": "factorize(8)", "source": "humaneval"}
+{"text": "remove_duplicates([1, 2, 3, 2, 4])", "source": "humaneval"}
+{"text": "flip_case('Hello')", "source": "humaneval"}
+{"text": "concatenate([])", "source": "humaneval"}
+{"text": "filter_by_prefix([], 'a')", "source": "humaneval"}
+{"text": "get_positive([-1, 2, -4, 5, 6])", "source": "humaneval"}
+{"text": "is_prime(6)", "source": "humaneval"}
+{"text": "round(find_zero([1, 2]), 2) # f(x) = 1 + 2x", "source": "humaneval"}
+{"text": "sort_third([1, 2, 3])", "source": "humaneval"}
+{"text": "unique([5, 3, 5, 2, 3, 3, 9, 0, 123])", "source": "humaneval"}
+{"text": "max_element([1, 2, 3])", "source": "humaneval"}
+{"text": "fizz_buzz(50)", "source": "humaneval"}
+{"text": "sort_even([1, 2, 3])", "source": "humaneval"}
+{"text": "def encode_cyclic(s: str):\n    \"\"\"\n    returns encoded string by cycling groups of three characters.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3),", "source": "humaneval"}
+{"text": "prime_fib(1)", "source": "humaneval"}
+{"text": "triples_sum_to_zero([1, 3, 5, 0])", "source": "humaneval"}
+{"text": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are", "source": "humaneval"}
+{"text": "incr_list([1, 2, 3])", "source": "humaneval"}
+{"text": "pairs_sum_to_zero([1, 3, 5, 0])", "source": "humaneval"}
+{"text": "change_base(8, 3)", "source": "humaneval"}
+{"text": "triangle_area(5, 3)", "source": "humaneval"}
+{"text": "median([3, 1, 2, 4, 5])", "source": "humaneval"}
+{"text": "is_palindrome('')", "source": "humaneval"}
+{"text": "def encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s", "source": "humaneval"}
+{"text": "remove_vowels('')", "source": "humaneval"}
+{"text": "below_threshold([1, 2, 4, 10], 100)", "source": "humaneval"}
+{"text": "same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')", "source": "humaneval"}
+{"text": "correct_bracketing(\"<\")", "source": "humaneval"}
+{"text": "monotonic([1, 2, 4, 20])", "source": "humaneval"}
+{"text": "common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])", "source": "humaneval"}
+{"text": "largest_prime_factor(13195)", "source": "humaneval"}
+{"text": "sum_to_n(30)", "source": "humaneval"}
+{"text": "correct_bracketing(\"(\")", "source": "humaneval"}
+{"text": "derivative([3, 1, 2, 4, 5])", "source": "humaneval"}
+{"text": "vowels_count(\"abcde\")", "source": "humaneval"}
+{"text": "circular_shift(12, 1)", "source": "humaneval"}
+{"text": "def digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the upper characters only'\n    ASCII codes.\n\n    Examples:\n        digitSum(\"\") => 0\n        digi", "source": "humaneval"}
+{"text": "def fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains", "source": "humaneval"}
+{"text": "def pluck(arr):\n    \"\"\"\n    \"Given an array representing a branch of a tree that has non-negative integer nodes\n    your task is to pluck one of the nodes and return it.\n    The plucked node should b", "source": "humaneval"}
+{"text": "def search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of", "source": "humaneval"}
+{"text": "def strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers", "source": "humaneval"}
+{"text": "def triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle.", "source": "humaneval"}
+{"text": "def will_it_fly(q,w):\n    '''\n    Write a function that returns True if the object q will fly, and False otherwise.\n    The object q will fly if it's balanced (it is a palindromic list) and the sum o", "source": "humaneval"}
+{"text": "def smallest_change(arr):\n    \"\"\"\n    Given an array arr of integers, find the minimum number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array th", "source": "humaneval"}
+{"text": "def total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list less than the other", "source": "humaneval"}
+{"text": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    E", "source": "humaneval"}
+{"text": "def is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    Fo", "source": "humaneval"}
+{"text": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Exa", "source": "humaneval"}
+{"text": "def hex_key(num):\n    \"\"\"You have been tasked to write a function that receives \n    a hexadecimal number as a string and counts the number of hexadecimal \n    digits that are primes (prime number, o", "source": "humaneval"}
+{"text": "def decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character represe", "source": "humaneval"}
+{"text": "def is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distin", "source": "humaneval"}
+{"text": "def numerical_letter_grade(grades):\n    \"\"\"It is the last week of the semester and the teacher has to give the grades\n    to students. The teacher has been making her own algorithm for grading.\n    T", "source": "humaneval"}
+{"text": "def prime_length(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length is a prime number or False otherwise\n    Examples\n    prime_length('Hello') == True", "source": "humaneval"}
+{"text": "def starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"", "source": "humaneval"}
+{"text": "def solve(N):\n    \"\"\"Given a positive integer N, return the total sum of its digits in binary.\n    \n    Example\n        For N = 1000, the sum of digits will be 1 the output should be \"1\".\n        For", "source": "humaneval"}
+{"text": "def add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at odd indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"", "source": "humaneval"}
+{"text": "def anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are rep", "source": "humaneval"}
+{"text": "def get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of column", "source": "humaneval"}
+{"text": "def sort_array(array):\n    \"\"\"\n    Given an array of non-negative integers, return a copy of the given array after sorting,\n    you will sort the given array in ascending order if the sum( first inde", "source": "humaneval"}
+{"text": "def encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner", "source": "humaneval"}
+{"text": "def next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such eleme", "source": "humaneval"}
+{"text": "is_bored(\"Hello world\")", "source": "humaneval"}
+{"text": "def any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\n    Returns false", "source": "humaneval"}
+{"text": "encode('test')", "source": "humaneval"}
+{"text": "def skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,", "source": "humaneval"}
+{"text": "def check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should ret", "source": "humaneval"}
+{"text": "def count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and less than n.\n    for example:\n    count_", "source": "humaneval"}
+{"text": "def multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412)", "source": "humaneval"}
+{"text": "def count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 1\n    count_upper('abcdefg') returns 0", "source": "humaneval"}
+{"text": "closest_integer(\"10\")", "source": "humaneval"}
+{"text": "make_a_pile(3)", "source": "humaneval"}
+{"text": "def words_string(s):\n    \"\"\"\n    You will be given a string of words separated by commas or spaces. Your task is\n    to split the string into words and return an array of the words.\n    \n    For exam", "source": "humaneval"}
+{"text": "def choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, th", "source": "humaneval"}
+{"text": "def rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to t", "source": "humaneval"}
+{"text": "unique_digits([15, 33, 1422, 1])", "source": "humaneval"}
+{"text": "def by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding nam", "source": "humaneval"}
+{"text": "def f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    or the s", "source": "humaneval"}
+{"text": "def even_odd_palindrome(n):\n    \"\"\"\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range(1, n), inclusive.\n\n    Exampl", "source": "humaneval"}
+{"text": "count_nums([]) == 0", "source": "humaneval"}
+{"text": "def move_one_ball(arr):\n    \"\"\"We have an array 'arr' of N integers arr[1], arr[2], ..., arr[N].The\n    numbers in the array will be randomly ordered. Your task is to determine if\n    it is possible", "source": "humaneval"}
+{"text": "def exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    betwe", "source": "humaneval"}
+{"text": "def histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.", "source": "humaneval"}
+{"text": "def reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is pali", "source": "humaneval"}
+{"text": "odd_count(['1234567'])", "source": "humaneval"}
+{"text": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\n    minSubA", "source": "humaneval"}
+{"text": "def max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.", "source": "humaneval"}
+{"text": "sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]", "source": "humaneval"}
+{"text": "def select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n co", "source": "humaneval"}
+{"text": "def get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vow", "source": "humaneval"}
+{"text": "def match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to c", "source": "humaneval"}
+{"text": "def maximum(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with the maximum k numbers in arr.\n\n    Example 1:\n\n        Input: arr", "source": "humaneval"}
+{"text": "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([", "source": "humaneval"}
+{"text": "def add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Examp", "source": "humaneval"}
+{"text": "def get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n    The Collatz conjecture is a conjecture in mathematics that conc", "source": "humaneval"}
+{"text": "def valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following", "source": "humaneval"}
+{"text": "def split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you", "source": "humaneval"}
+{"text": "def is_sorted(lst):\n    '''\n    Given a list of numbers, return whether or not they are sorted\n    in ascending order. If list has more than 1 duplicate of the same\n    number, return False. Assume n", "source": "humaneval"}
+{"text": "def intersection(interval1, interval2):\n    \"\"\"You are given two intervals,\n    where each interval is a pair of integers. For example, interval = (start, end) = (1, 2).\n    The given intervals are c", "source": "humaneval"}
+{"text": "prod_signs([1, 2, 2, -4]) == -9", "source": "humaneval"}
+{"text": "def minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    incl", "source": "humaneval"}
+{"text": "def tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in \n    the last couple centuries. However, what people don't know is Tribonacci sequence.\n    Tribonacci", "source": "humaneval"}
+{"text": "def digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) =", "source": "humaneval"}
+{"text": "def is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence", "source": "humaneval"}
+{"text": "def sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.", "source": "humaneval"}
+{"text": "def check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and", "source": "humaneval"}
+{"text": "def can_arrange(arr):\n    \"\"\"Create a function which returns the largest index of an element which\n    is not greater than or equal to the element immediately preceding it. If\n    no such element exi", "source": "humaneval"}
+{"text": "def largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers, and 'b' is the smallest\n    of positive integers in a", "source": "humaneval"}
+{"text": "def compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None", "source": "humaneval"}
+{"text": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == False\n    is_equal_to_s", "source": "humaneval"}
+{"text": "special_factorial(4)", "source": "humaneval"}
+{"text": "def fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has more than 2 consecutive spaces, \n    then replace all consecutive spaces wit", "source": "humaneval"}
+{"text": "def file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    A file", "source": "humaneval"}
+{"text": "def sum_squares(lst):\n    \"\"\"\"\n    This function will take a list of integers. For all entries in the list, the function shall square the integer entry if its index is a \n    multiple of 3 and will", "source": "humaneval"}
+{"text": "def words_in_sentence(sentence):\n    \"\"\"\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contai", "source": "humaneval"}
+{"text": "def simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Bo", "source": "humaneval"}
+{"text": "order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]", "source": "humaneval"}
+{"text": "def specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are greater than 10 and both \n    first and last dig", "source": "humaneval"}
+{"text": "def get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 \u2264 i \u2264 n), the value of a[i] = i * i - i + 1.\n        R", "source": "humaneval"}
+{"text": "def bf(planet1, planet2):\n    '''\n    There are eight planets in our solar system: the closerst to the Sun \n    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn, \n    Uranus, Nept", "source": "humaneval"}
+{"text": "def sorted_list_sum(lst):\n    \"\"\"Write a function that accepts a list of strings as a parameter,\n    deletes the strings that have odd lengths from it,\n    and returns the resulted list with a sorted", "source": "humaneval"}
+{"text": "def x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34", "source": "humaneval"}
+{"text": "def double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are odd. Ignore numbers that are negative or not integers.", "source": "humaneval"}
+{"text": "def compare(game,guess):\n    \"\"\"I think we all remember that feeling when the result of some long-awaited\n    event is finally known. The feelings and thoughts you have at that moment are\n    definit", "source": "humaneval"}
+{"text": "def Strongest_Extension(class_name, extensions):\n    \"\"\"You will be given the name of a class (a string) and a list of extensions.\n    The extensions are to be used to load additional classes to the", "source": "humaneval"}
+{"text": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    cycpattern_check(\"abcd\",\"abd\") => Fa", "source": "humaneval"}
+{"text": "def even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(", "source": "humaneval"}
+{"text": "int_to_mini_roman(19) == 'xix'", "source": "humaneval"}
+{"text": "def right_angle_triangle(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a right-angled triangle, False otherwise.\n    A right-angled", "source": "humaneval"}
+{"text": "def find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings h", "source": "humaneval"}
+{"text": "def eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.", "source": "humaneval"}
+{"text": "def do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given li", "source": "humaneval"}
+{"text": "def solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, rev", "source": "humaneval"}
+{"text": "string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'", "source": "humaneval"}
+{"text": "def generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [2, 4, 6", "source": "humaneval"}
+{"text": "Write a python function to find the first repeated character in a given string.", "source": "mbpp"}
+{"text": "Write a function to get all lucid numbers smaller than or equal to a given integer.", "source": "mbpp"}
+{"text": "Write a function to reverse words seperated by spaces in a given string.", "source": "mbpp"}
+{"text": "Write a function to check if the given integer is a prime number.", "source": "mbpp"}
+{"text": "Write a function to convert degrees to radians.", "source": "mbpp"}
+{"text": "Write a function to search a string for a regex pattern. The function should return the matching subtring, a start index and an end index.", "source": "mbpp"}
+{"text": "Write a python function to find nth bell number.", "source": "mbpp"}
+{"text": "Write a python function which takes a list and returns a list with the same elements, but the k'th element removed.", "source": "mbpp"}
+{"text": "Write a function which given a matrix represented as a list of lists returns the max of the n'th column.", "source": "mbpp"}
+{"text": "Write a python function which takes a list of lists, where each sublist has two elements, and returns a list of two lists where the first list has the first element of each sublist and the second one has the second.", "source": "mbpp"}
+{"text": "Write a function to find the cumulative sum of all the values that are present in the given tuple list.", "source": "mbpp"}
+{"text": "Write a function which takes a tuple of tuples and returns the average value for each tuple as a list.", "source": "mbpp"}
+{"text": "Write a function which takes two tuples of the same length and performs the element wise modulo.", "source": "mbpp"}
+{"text": "Write a function to check for the number of jumps required of given length to reach a point of form (d, 0) from origin in a 2d plane.", "source": "mbpp"}
+{"text": "Write a function to divide two lists element wise.", "source": "mbpp"}
+{"text": "Write a function to move all the numbers to the end of the given string.", "source": "mbpp"}
+{"text": "Write a function to find the size of the largest subset of a list of numbers so that every pair is divisible.", "source": "mbpp"}
+{"text": "Write a function to find the median of two sorted lists of same size.", "source": "mbpp"}
+{"text": "Write a function to compute the n-th power of each number in a list.", "source": "mbpp"}
+{"text": "Write a python function to convert a given string to uppercase.", "source": "mbpp"}
+{"text": "Write a python function to interchange the first and last element in a given list.", "source": "mbpp"}
+{"text": "Write a python function to find the area of the largest triangle that can be inscribed in a semicircle with a given radius.", "source": "mbpp"}
+{"text": "Write a python function to find the smallest missing number from a sorted list of natural numbers.", "source": "mbpp"}
+{"text": "Write a function to replace all spaces in the given string with '%20'.", "source": "mbpp"}
+{"text": "Write a python function to find even numbers from a list of numbers.", "source": "mbpp"}
+{"text": "Write a function to extract all the adjacent coordinates of the given coordinate tuple.", "source": "mbpp"}
+{"text": "Write a function to replace whitespaces with an underscore and vice versa in a given string.", "source": "mbpp"}
+{"text": "Write a python function to move all zeroes to the end of the given list.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of xor of all pairs of numbers in the given list.", "source": "mbpp"}
+{"text": "Write a function to sort the given list.", "source": "mbpp"}
+{"text": "Write a function to check whether the given amount has no profit and no loss", "source": "mbpp"}
+{"text": "Write a function to calculate the wind chill index rounded to the next integer given the wind velocity in km/h and a temperature in celsius.", "source": "mbpp"}
+{"text": "Write a function to sum the length of the names of a given list of names after removing the names that start with a lowercase letter.", "source": "mbpp"}
+{"text": "Write a function to remove the parenthesis and what is inbetween them from a string.", "source": "mbpp"}
+{"text": "Write a function to find the nth nonagonal number.", "source": "mbpp"}
+{"text": "Write a function that checks if a strings contains 'z', except at the start and end of the word.", "source": "mbpp"}
+{"text": "Write a python function to reverse an array upto a given position.", "source": "mbpp"}
+{"text": "Write a function to add a dictionary to the tuple. The output should be a tuple.", "source": "mbpp"}
+{"text": "Given a square matrix of size N*N given as a list of lists, where each cell is associated with a specific cost. A path is defined as a specific sequence of cells that starts from the top-left cell move only right or down and ends on bottom right cell. We want to find a path with the maximum average over all existing paths. Average is computed as total cost divided by the number of cells visited in the path.", "source": "mbpp"}
+{"text": "The input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weight) as a value, - minimal height, - minimal weight. Write a function to filter students that have height and weight above the minimum.", "source": "mbpp"}
+{"text": "The input is defined as two lists of the same length. Write a function to count indices where the lists have the same values.", "source": "mbpp"}
+{"text": "Write a function that takes base and power as arguments and calculate the sum of all digits of the base to the specified power.", "source": "mbpp"}
+{"text": "Write a function to extract values between quotation marks \" \" of the given string.", "source": "mbpp"}
+{"text": "Write a function that takes as input a tuple of numbers (t_1,...,t_{N+1}) and returns a tuple of length N where the i-th element of the tuple is equal to t_i * t_{i+1}.", "source": "mbpp"}
+{"text": "Write a function takes as input two lists [a_1,...,a_n], [b_1,...,b_n] and returns [a_1+b_1,...,a_n+b_n].", "source": "mbpp"}
+{"text": "Write a function to remove consecutive duplicates of a given list.", "source": "mbpp"}
+{"text": "Write a function to find the lateral surface area of a cone given radius r and the height h.", "source": "mbpp"}
+{"text": "Write a function to replace all occurrences of spaces, commas, or dots with a colon.", "source": "mbpp"}
+{"text": "Write a function to find the index of the first occurrence of a given number in a sorted array.", "source": "mbpp"}
+{"text": "Write a python function to find sum of products of all possible sublists of a given list. https://www.geeksforgeeks.org/sum-of-products-of-all-possible-subarrays/", "source": "mbpp"}
+{"text": "Write a python function to toggle bits of the number except the first and the last bit. https://www.geeksforgeeks.org/toggle-bits-number-expect-first-last-bits/", "source": "mbpp"}
+{"text": "Write a function to locate the left insertion point for a specified value in sorted order. https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-data-structure-exercise-24.php", "source": "mbpp"}
+{"text": "Write a function to check whether the given string is starting with a vowel or not using regex.", "source": "mbpp"}
+{"text": "Write a function to calculate the geometric sum of n-1. https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion-exercise-9.php", "source": "mbpp"}
+{"text": "Write a python function to find the index of smallest triangular number with n digits. https://www.geeksforgeeks.org/index-of-smallest-triangular-number-with-n-digits/", "source": "mbpp"}
+{"text": "Write a function to convert the given tuple to a key-value dictionary using adjacent elements. https://www.geeksforgeeks.org/python-convert-tuple-to-adjacent-pair-dictionary/", "source": "mbpp"}
+{"text": "Write a python function to check whether all the characters are same or not.", "source": "mbpp"}
+{"text": "Write a function to caluclate the area of a tetrahedron.", "source": "mbpp"}
+{"text": "Write a function to rotate a given list by specified number of items to the right direction. https://www.geeksforgeeks.org/python-program-right-rotate-list-n/", "source": "mbpp"}
+{"text": "Write a function to check if the given tuple has any none value or not.", "source": "mbpp"}
+{"text": "Write a function to find numbers within a given range from startnum ti endnum where every number is divisible by every digit it contains. https://www.w3resource.com/python-exercises/lambda/python-lambda-exercise-24.php", "source": "mbpp"}
+{"text": "Write a function to find area of a sector. The function takes the radius and angle as inputs. Function should return None if the angle is larger than 360 degrees.", "source": "mbpp"}
+{"text": "Write a function to find the longest common subsequence for the given three string sequence. https://www.geeksforgeeks.org/lcs-longest-common-subsequence-three-strings/", "source": "mbpp"}
+{"text": "Write a function to put spaces between words starting with capital letters in a given string.", "source": "mbpp"}
+{"text": "Write a function to sort a given list of strings of numbers numerically. https://www.geeksforgeeks.org/python-sort-numeric-strings-in-a-list/", "source": "mbpp"}
+{"text": "Write a function to add the given tuple to the given list.", "source": "mbpp"}
+{"text": "Write a function to check if the given array represents min heap or not. https://www.geeksforgeeks.org/how-to-check-if-a-given-array-represents-a-binary-heap/", "source": "mbpp"}
+{"text": "Write a function to find the nth jacobsthal number. https://www.geeksforgeeks.org/jacobsthal-and-jacobsthal-lucas-numbers/ 0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341, 683, 1365, 2731, ...", "source": "mbpp"}
+{"text": "Write a function to find minimum k records from tuple list. https://www.geeksforgeeks.org/python-find-minimum-k-records-from-tuple-list/ - in this case a verbatim copy of test cases", "source": "mbpp"}
+{"text": "We say that an element is common for lists l1, l2, l3 if it appears in all three lists under the same index. Write a function to find common elements from three lists. The function should return a list.", "source": "mbpp"}
+{"text": "Write a function to find the second smallest number in a list.", "source": "mbpp"}
+{"text": "Write a function that matches a string that has an 'a' followed by one or more 'b's. https://www.w3resource.com/python-exercises/re/python-re-exercise-3.php", "source": "mbpp"}
+{"text": "Write a function to count the pairs of reverse strings in the given string list. https://www.geeksforgeeks.org/python-program-to-count-the-pairs-of-reverse-strings/", "source": "mbpp"}
+{"text": "Write a function to count lists within a list. The function should return a dictionary where every list is converted to a tuple and the value of such tuple is the number of its occurencies in the original list.", "source": "mbpp"}
+{"text": "Write a function to check whether a given string is a decimal number with a precision of 2.", "source": "mbpp"}
+{"text": "Write a python function to check whether a list of numbers contains only one distinct element or not.", "source": "mbpp"}
+{"text": "Write a function to check whether the given month number contains 30 days or not. Months are given as number from 1 to 12.", "source": "mbpp"}
+{"text": "Write a python function to find the minimum difference between any two elements in a given array. https://www.geeksforgeeks.org/find-minimum-difference-pair/", "source": "mbpp"}
+{"text": "Write a python function to count number of digits in a given string.", "source": "mbpp"}
+{"text": "Write a function to find nth polite number. geeksforgeeks.org/n-th-polite-number/", "source": "mbpp"}
+{"text": "Write a function to return a list of all pairs of consecutive items in a given list.", "source": "mbpp"}
+{"text": "Write a python function to count the number of pairs whose sum is equal to \u2018sum\u2019. The funtion gets as input a list of numbers and the sum,", "source": "mbpp"}
+{"text": "Write a python function to get the difference between two lists.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of fourth power of first n odd natural numbers.", "source": "mbpp"}
+{"text": "Write a function to check if the given expression is balanced or not. https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/", "source": "mbpp"}
+{"text": "Write a function to remove all the words with k length in the given string.", "source": "mbpp"}
+{"text": "Write a function to find the occurrence and position of the substrings within a string. Return None if there is no match.", "source": "mbpp"}
+{"text": "Write a python function to check whether every odd index contains odd numbers of a given list.", "source": "mbpp"}
+{"text": "Write a function to count those characters which have vowels as their neighbors in the given string.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of non-repeated elements in a given list.", "source": "mbpp"}
+{"text": "Write a function to pack consecutive duplicates of a given list elements into sublists.", "source": "mbpp"}
+{"text": "Write a function to count the number of lists within a list. The function should return a dictionary, where every list is turned to a tuple, and the value of the tuple is the number of its occurrences.", "source": "mbpp"}
+{"text": "Write a function to find the combinations of sums with tuples in the given tuple list. https://www.geeksforgeeks.org/python-combinations-of-sum-with-tuples-in-tuple-list/", "source": "mbpp"}
+{"text": "Write a python function to check whether the count of divisors is even. https://www.w3resource.com/python-exercises/basic/python-basic-1-exercise-24.php", "source": "mbpp"}
+{"text": "Write a python function to find the sum of all odd length subarrays. https://www.geeksforgeeks.org/sum-of-all-odd-length-subarrays/", "source": "mbpp"}
+{"text": "Write a function to convert rgb color to hsv color. https://www.geeksforgeeks.org/program-change-rgb-color-model-hsv-color-model/", "source": "mbpp"}
+{"text": "Write a function to find the product of first even and odd number of a given list.", "source": "mbpp"}
+{"text": "Write a function to convert tuple string to integer tuple.", "source": "mbpp"}
+{"text": "Write a function to locate the right insertion point for a specified value in sorted order.", "source": "mbpp"}
+{"text": "Write a function that matches a string that has an a followed by three 'b'.", "source": "mbpp"}
+{"text": "Write a function to create a new tuple from the given string and list.", "source": "mbpp"}
+{"text": "Write a python function to check whether every even index contains even numbers of a given list.", "source": "mbpp"}
+{"text": "Write a function to remove tuples from the given tuple.", "source": "mbpp"}
+{"text": "Write a python function to count the number of lists in a given number of lists.", "source": "mbpp"}
+{"text": "Write a python function to find the last position of an element in a sorted array.", "source": "mbpp"}
+{"text": "Write a function that matches a string that has an 'a' followed by anything, ending in 'b'.", "source": "mbpp"}
+{"text": "Write function to find the sum of all items in the given dictionary.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of all odd natural numbers within the range l and r.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of an array.", "source": "mbpp"}
+{"text": "Write a function to that rotate left bits by d bits a given number. We assume that the number is 32 bit.", "source": "mbpp"}
+{"text": "Write a function to remove all whitespaces from a string.", "source": "mbpp"}
+{"text": "Write a python function to count the number of equal numbers from three given integers.", "source": "mbpp"}
+{"text": "Write a python function to count the number of rotations required to generate a sorted array. https://www.geeksforgeeks.org/count-of-rotations-required-to-generate-a-sorted-array/", "source": "mbpp"}
+{"text": "Write a function to check whether the given number is a perfect square or not. https://www.geeksforgeeks.org/check-if-given-number-is-perfect-square-in-cpp/", "source": "mbpp"}
+{"text": "Write a function to check whether the product of numbers in a list is even or not.", "source": "mbpp"}
+{"text": "Write a function that returns the list in a list of lists whose sum of elements is the highest.", "source": "mbpp"}
+{"text": "Write a function to find maximum run of uppercase characters in the given string.", "source": "mbpp"}
+{"text": "Write a python function to find the first odd number in a given list of numbers.", "source": "mbpp"}
+{"text": "Write a function to check if the given tuples contain the k or not.", "source": "mbpp"}
+{"text": "Write a function to check if each element of second tuple is smaller than its corresponding element in the first tuple.", "source": "mbpp"}
+{"text": "Write a python function to remove first and last occurrence of a given character from the string.", "source": "mbpp"}
+{"text": "Write a function to sort a given matrix in ascending order according to the sum of its rows.", "source": "mbpp"}
+{"text": "Write a python function to find the volume of a triangular prism.", "source": "mbpp"}
+{"text": "Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.", "source": "mbpp"}
+{"text": "Write a function that returns the perimeter of a square given its side length as input.", "source": "mbpp"}
+{"text": "Write a function to remove characters from the first string which are present in the second string.", "source": "mbpp"}
+{"text": "Write a function to find whether a given array of integers contains any duplicate element.", "source": "mbpp"}
+{"text": "Write a function to check if the given number is woodball or not.", "source": "mbpp"}
+{"text": "Write a python function to check if a given number is one less than twice its reverse.", "source": "mbpp"}
+{"text": "Write a python function to find the largest number that can be formed with the given list of digits.", "source": "mbpp"}
+{"text": "Write a python function to check whether the given two integers have opposite sign or not.", "source": "mbpp"}
+{"text": "Write a function to find the nth octagonal number.", "source": "mbpp"}
+{"text": "Write a python function to count the number of substrings with the sum of digits equal to their length.", "source": "mbpp"}
+{"text": "Write a python function to find smallest number in a list.", "source": "mbpp"}
+{"text": "Write a function to find the maximum difference between available pairs in the given tuple list.", "source": "mbpp"}
+{"text": "Write a function to sort a list of tuples using the second value of each tuple.", "source": "mbpp"}
+{"text": "Write a function to flatten a list and sum all of its elements.", "source": "mbpp"}
+{"text": "Write a python function to count the number of positive numbers in a list.", "source": "mbpp"}
+{"text": "Write a function to find the number of ways to partition a set of Bell numbers.", "source": "mbpp"}
+{"text": "Write a python function to check whether the given array is monotonic or not.", "source": "mbpp"}
+{"text": "Write a function to check whether a list contains the given sublist or not.", "source": "mbpp"}
+{"text": "Write a function to find whether all the given tuples have equal length or not.", "source": "mbpp"}
+{"text": "Write a function to sort a list of elements.", "source": "mbpp"}
+{"text": "Write a python function to check whether the given number can be represented as the difference of two squares or not.", "source": "mbpp"}
+{"text": "Write a function to check whether it follows the sequence given in the patterns array.", "source": "mbpp"}
+{"text": "Write a function to find tuples which have all elements divisible by k from the given list of tuples.", "source": "mbpp"}
+{"text": "Write a python function to find whether a number is divisible by 11.", "source": "mbpp"}
+{"text": "Write a python function to check whether the length of the word is odd or not.", "source": "mbpp"}
+{"text": "Write a function to find the nth tetrahedral number.", "source": "mbpp"}
+{"text": "Write a function to find the volume of a sphere.", "source": "mbpp"}
+{"text": "Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.", "source": "mbpp"}
+{"text": "Write a function to find the nth number in the newman conway sequence.", "source": "mbpp"}
+{"text": "Write a function to find the surface area of a sphere.", "source": "mbpp"}
+{"text": "Write a function to find nth centered hexagonal number.", "source": "mbpp"}
+{"text": "Write a function to merge three dictionaries into a single dictionary.", "source": "mbpp"}
+{"text": "Write a function to get the frequency of all the elements in a list, returned as a dictionary.", "source": "mbpp"}
+{"text": "Write a function to find the closest smaller number than n.", "source": "mbpp"}
+{"text": "Write a python function to find the length of the longest word.", "source": "mbpp"}
+{"text": "Write a function to check if a string is present as a substring in a given list of string values.", "source": "mbpp"}
+{"text": "Write a function to check whether the given number is undulating or not.", "source": "mbpp"}
+{"text": "Write a function to calculate the value of 'a' to the power 'b'.", "source": "mbpp"}
+{"text": "Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.", "source": "mbpp"}
+{"text": "Write a python function to find the length of the smallest list in a list of lists.", "source": "mbpp"}
+{"text": "Write a python function to find the number of divisors of a given integer.", "source": "mbpp"}
+{"text": "Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.", "source": "mbpp"}
+{"text": "Write a function to multiply all the numbers in a list and divide with the length of the list.", "source": "mbpp"}
+{"text": "Write a function to convert the given decimal number to its binary equivalent, represented as a string with no leading zeros.", "source": "mbpp"}
+{"text": "Write a function to find the next smallest palindrome of a specified integer, returned as an integer.", "source": "mbpp"}
+{"text": "Write a function to find the kth element in the given array using 1-based indexing.", "source": "mbpp"}
+{"text": "Write a function to convert a snake case string to camel case string.", "source": "mbpp"}
+{"text": "Write a function to find the Eulerian number a(n, m).", "source": "mbpp"}
+{"text": "Write a function to sort each sublist of strings in a given list of lists.", "source": "mbpp"}
+{"text": "Write a python function to count true booleans in the given list.", "source": "mbpp"}
+{"text": "Write a function to append the given list to the given tuples.", "source": "mbpp"}
+{"text": "Write a function to merge three lists into a single sorted list.", "source": "mbpp"}
+{"text": "Write a python function to find the number of numbers with an odd value when rotating a binary string the given number of times.", "source": "mbpp"}
+{"text": "Write a function to find the common elements in given nested lists.", "source": "mbpp"}
+{"text": "Write a function to check if a string represents an integer or not.", "source": "mbpp"}
+{"text": "Write a function to check whether all dictionaries in a list are empty or not.", "source": "mbpp"}
+{"text": "Write a function to convert a given tuple of positive integers into a single integer.", "source": "mbpp"}
+{"text": "Write a function to convert all possible convertible elements in a list of lists to floats.", "source": "mbpp"}
+{"text": "Write a function to convert a string to a list of strings split on the space character.", "source": "mbpp"}
+{"text": "Write a python function to find the element that appears only once in a sorted array.", "source": "mbpp"}
+{"text": "Write a function to find the maximum absolute product between numbers in pairs of tuples within a given list.", "source": "mbpp"}
+{"text": "Write a function to sum all amicable numbers from 1 to a specified number.", "source": "mbpp"}
+{"text": "Write a function to get the angle of a complex number.", "source": "mbpp"}
+{"text": "Write a function to find the maximum difference between the number of 0s and number of 1s in any sub-string of the given binary string.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of common divisors of two given numbers.", "source": "mbpp"}
+{"text": "Write a function to multiply two integers.", "source": "mbpp"}
+{"text": "Write a function to find words that are longer than n characters from a given list of words.", "source": "mbpp"}
+{"text": "Write a function to calculate whether the matrix is a magic square.", "source": "mbpp"}
+{"text": "Write a function to find the item with maximum frequency in a given list.", "source": "mbpp"}
+{"text": "Write a python function to reverse only the vowels of a given string (where y is not a vowel).", "source": "mbpp"}
+{"text": "Write a function to convert a tuple to a string.", "source": "mbpp"}
+{"text": "Write a function to calculate the sum of the negative numbers of a given list of numbers.", "source": "mbpp"}
+{"text": "Write a function to find the nth hexagonal number.", "source": "mbpp"}
+{"text": "Write a function to find the ratio of zeroes to non-zeroes in an array of integers.", "source": "mbpp"}
+{"text": "Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.", "source": "mbpp"}
+{"text": "Write a function to find the circumference of a circle.", "source": "mbpp"}
+{"text": "Write a function to flatten the list of lists into a single set of numbers.", "source": "mbpp"}
+{"text": "Write a function to sort a list of elements.", "source": "mbpp"}
+{"text": "Write a function to count number items that are identical in the same position of three given lists.", "source": "mbpp"}
+{"text": "Write a function to find number of lists present in the given tuple.", "source": "mbpp"}
+{"text": "Write a python function to find the maximum difference between any two elements in a given array.", "source": "mbpp"}
+{"text": "Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.", "source": "mbpp"}
+{"text": "Write a function to remove all elements from a given list present in another list.", "source": "mbpp"}
+{"text": "Write a function to calculate the sum (n - 2*i) from i=0 to n // 2, for instance n + (n-2) + (n-4)... (until n-x =< 0).", "source": "mbpp"}
+{"text": "Write a function to calculate the area of a regular polygon given the length and number of its sides.", "source": "mbpp"}
+{"text": "Write a function to determine if the sum of the divisors of two integers are the same.", "source": "mbpp"}
+{"text": "Write a function to count the number of characters in a string that occur at the same position in the string as in the English alphabet (case insensitive).", "source": "mbpp"}
+{"text": "Write a function that counts the number of pairs of integers in a list that xor to an even number.", "source": "mbpp"}
+{"text": "Write a python function to find the smallest power of 2 greater than or equal to n.", "source": "mbpp"}
+{"text": "Write a function to count the number of occurrences of a number in a given list.", "source": "mbpp"}
+{"text": "Write a function to find the sum of numbers in a list within a range specified by two indices.", "source": "mbpp"}
+{"text": "Write a function to find the perimeter of a regular pentagon from the length of its sides.", "source": "mbpp"}
+{"text": "Write a function to count the number of occurence of the string 'std' in a given string.", "source": "mbpp"}
+{"text": "Write a function to check if all the elements in tuple have same data type or not.", "source": "mbpp"}
+{"text": "Write a function that takes in a sorted array, its length (n), and an element and returns whether the element is the majority element in the given sorted array. (The majority element is the element that occurs more than n/2 times.)", "source": "mbpp"}
+{"text": "Write a python function to count the number of set bits (binary digits with value 1) in a given number.", "source": "mbpp"}
+{"text": "Write a python function to remove the characters which have odd index values of a given string.", "source": "mbpp"}
+{"text": "Write a function to find minimum of three numbers.", "source": "mbpp"}
+{"text": "Write a python function to check whether all the bits are unset in the given range or not.", "source": "mbpp"}
+{"text": "Write a function that takes in an array and an integer n, and re-arranges the first n elements of the given array so that all negative elements appear before positive ones, and where the relative order among negative and positive elements is preserved.", "source": "mbpp"}
+{"text": "Write a function that takes in a string and character, replaces blank spaces in the string with the character, and returns the string.", "source": "mbpp"}
+{"text": "Write a function that takes in a list and an integer n and returns a list containing the n largest items from the list.", "source": "mbpp"}
+{"text": "Write a function to find the lateral surface area of a cylinder.", "source": "mbpp"}
+{"text": "Write a function to find the volume of a cube given its side length.", "source": "mbpp"}
+{"text": "Write a python function to set all even bits of a given number.", "source": "mbpp"}
+{"text": "Write a function that takes in a list of tuples and returns a dictionary mapping each unique tuple to the number of times it occurs in the list.", "source": "mbpp"}
+{"text": "Write a python function to count the number of non-empty substrings of a given string.", "source": "mbpp"}
+{"text": "Write a function that takes in positive integers m and n and finds the number of possible sequences of length n, such that each element is a positive integer and is greater than or equal to twice the previous element but less than or equal to m.", "source": "mbpp"}
+{"text": "Write a function that takes in two lists and replaces the last element of the first list with the elements of the second list.", "source": "mbpp"}
+{"text": "Write a function to count the total number of characters in a string.", "source": "mbpp"}
+{"text": "Write a python function to find the next perfect square greater than a given number.", "source": "mbpp"}
+{"text": "Write a function that takes an array and finds the maximum sum of a bitonic subsequence for the given array, where a sequence is bitonic if it is first increasing and then decreasing.", "source": "mbpp"}
+{"text": "Write a function for computing square roots using the babylonian method.", "source": "mbpp"}
+{"text": "Write a function to find the length of the longest palindromic subsequence in the given string.", "source": "mbpp"}
+{"text": "Write a function that takes in an integer n and calculates the harmonic sum of n-1.", "source": "mbpp"}
+{"text": "Write a function to find the intersection of two arrays.", "source": "mbpp"}
+{"text": "Write a python function that takes in a tuple and an element and counts the occcurences of the element in the tuple.", "source": "mbpp"}
+{"text": "Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.", "source": "mbpp"}
+{"text": "Write a python function to convert complex numbers to polar coordinates.", "source": "mbpp"}
+{"text": "Write a python function that returns the number of integer elements in a given list.", "source": "mbpp"}
+{"text": "Write a function that takes in a list and length n, and generates all combinations (with repetition) of the elements of the list and returns a list with a tuple for each combination.", "source": "mbpp"}
+{"text": "Write a python function that takes in a non-negative number and returns the number of prime numbers less than the given non-negative number.", "source": "mbpp"}
+{"text": "Write a function that takes in two numbers and returns a tuple with the second number and then the first number.", "source": "mbpp"}
+{"text": "Write a function to maximize the given two tuples.", "source": "mbpp"}
+{"text": "Write a function to find the nth newman\u2013shanks\u2013williams prime number.", "source": "mbpp"}
+{"text": "Write a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.", "source": "mbpp"}
+{"text": "Write a function that takes in a list and an integer L and splits the given list into two parts where the length of the first part of the list is L, and returns the resulting lists in a tuple.", "source": "mbpp"}
+{"text": "Write a function to calculate a dog's age in dog's years.", "source": "mbpp"}
+{"text": "Write a function that takes in a list and an integer n and splits a list for every nth element, returning a list of the resulting lists.", "source": "mbpp"}
+{"text": "Write a function to find the lateral surface area of a cube given its side length.", "source": "mbpp"}
+{"text": "Write a python function that takes in an integer n and returns the sum of the squares of the first n odd natural numbers.", "source": "mbpp"}
+{"text": "Write a function to find the n'th star number.", "source": "mbpp"}
+{"text": "Write a function to find the ascii value of a character.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of even numbers at even positions of a list.", "source": "mbpp"}
+{"text": "Write a python function that takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power.", "source": "mbpp"}
+{"text": "Write a function that takes in a list of tuples and returns a list containing the rear element of each tuple.", "source": "mbpp"}
+{"text": "Write a function that takes in two tuples and subtracts the elements of the first tuple by the elements of the second tuple with the same index.", "source": "mbpp"}
+{"text": "Write a python function that takes in a positive integer n and finds the sum of even index binomial coefficients.", "source": "mbpp"}
+{"text": "Write a function that takes in the radius and height of a cylinder and returns the the volume.", "source": "mbpp"}
+{"text": "Write a function that takes in a dictionary and integer n and filters the dictionary to only include entries with values greater than or equal to n.", "source": "mbpp"}
+{"text": "Write a function to find the number of elements that occurs before the tuple element in the given tuple.", "source": "mbpp"}
+{"text": "Write a function to find the nth decagonal number.", "source": "mbpp"}
+{"text": "Write a function that takes in an array and element and returns a tuple containing a boolean that indicates if the element is in the array and the index position of the element (or -1 if the element is not found).", "source": "mbpp"}
+{"text": "Write a python function to check if the elements of a given list are unique or not.", "source": "mbpp"}
+{"text": "Write a function to subtract two lists element-wise.", "source": "mbpp"}
+{"text": "Write a python function takes in an integer and check whether the frequency of each digit in the integer is less than or equal to the digit itself.", "source": "mbpp"}
+{"text": "Write a function that takes in a list and element and checks whether all items in the list are equal to the given element.", "source": "mbpp"}
+{"text": "Write a function that checks whether a string contains the 'a' character followed by two or three 'b' characters.", "source": "mbpp"}
+{"text": "Write a function to find the largest sum of a contiguous array in the modified array which is formed by repeating the given array k times.", "source": "mbpp"}
+{"text": "Write a python function takes in an integer n and returns the sum of squares of first n even natural numbers.", "source": "mbpp"}
+{"text": "Write a function to find the list of maximum length in a list of lists.", "source": "mbpp"}
+{"text": "Write a function to find out the number of ways of painting the fence such that at most 2 adjacent posts have the same color for the given fence with n posts and k colors.", "source": "mbpp"}
+{"text": "Write a python function to find quotient of two numbers (rounded down to the nearest integer).", "source": "mbpp"}
+{"text": "Write a function to find the third side of a right angled triangle.", "source": "mbpp"}
+{"text": "Write a function to find the maximum value in a given heterogeneous list.", "source": "mbpp"}
+{"text": "Write a function to return the sum of all divisors of a number.", "source": "mbpp"}
+{"text": "Write a python function to count inversions in an array.", "source": "mbpp"}
+{"text": "Write a function to flatten a given nested list structure.", "source": "mbpp"}
+{"text": "Write a function to calculate the maximum aggregate from the list of tuples.", "source": "mbpp"}
+{"text": "Write a function to find the count of all binary sequences of length 2n such that sum of first n bits is same as sum of last n bits.", "source": "mbpp"}
+{"text": "Write a function to find the depth of a dictionary.", "source": "mbpp"}
+{"text": "Write a python function to find element at a given index after number of rotations.", "source": "mbpp"}
+{"text": "Write a function to return two words from a list of words starting with letter 'p'.", "source": "mbpp"}
+{"text": "Write a function to find the maximum sum of increasing subsequence from prefix until ith index and also including a given kth element which is after i, i.e., k > i .", "source": "mbpp"}
+{"text": "Write a function to get a colon of a tuple.", "source": "mbpp"}
+{"text": "Write a function to find the specified number of largest products from two given lists, selecting one factor from each list.", "source": "mbpp"}
+{"text": "Write a python function to find the maximum of two numbers.", "source": "mbpp"}
+{"text": "Write a function to convert a given string to a tuple of characters.", "source": "mbpp"}
+{"text": "Write a python function to set the left most unset bit.", "source": "mbpp"}
+{"text": "Write a function to find the volume of a cone.", "source": "mbpp"}
+{"text": "Write a python function to find the highest power of 2 that is less than or equal to n.", "source": "mbpp"}
+{"text": "Write a function to find the n'th lucas number.", "source": "mbpp"}
+{"text": "Write a function to apply a given format string to all of the elements in a list.", "source": "mbpp"}
+{"text": "Write a function to convert more than one list to nested dictionary.", "source": "mbpp"}
+{"text": "Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).", "source": "mbpp"}
+{"text": "Write a function to find the list with maximum length.", "source": "mbpp"}
+{"text": "Write a function to check if given tuple contains no duplicates.", "source": "mbpp"}
+{"text": "Write a python function to find the first non-repeated character in a given string.", "source": "mbpp"}
+{"text": "Write a function to check whether the given string starts and ends with the same character or not.", "source": "mbpp"}
+{"text": "Write a function to find the median of three numbers.", "source": "mbpp"}
+{"text": "Write a function to compute the sum of digits of each number of a given list.", "source": "mbpp"}
+{"text": "Write a function to perform the mathematical bitwise xor operation across the given tuples.", "source": "mbpp"}
+{"text": "Write a function to extract the number of unique tuples in the given list.", "source": "mbpp"}
+{"text": "Write a function to perform index wise addition of tuple elements in the given two nested tuples.", "source": "mbpp"}
+{"text": "Write a python function to find the minimum of two numbers.", "source": "mbpp"}
+{"text": "Write a function to check whether an element exists within a tuple.", "source": "mbpp"}
+{"text": "Write a python function to find whether the parity of a given number is odd.", "source": "mbpp"}
+{"text": "Write a function to create the next bigger number by rearranging the digits of a given number.", "source": "mbpp"}
+{"text": "Write a function to find k number of smallest pairs which consist of one element from the first array and one element from the second array.", "source": "mbpp"}
+{"text": "Write a function to find the minimum product from the pairs of tuples within a given list.", "source": "mbpp"}
+{"text": "Write a function to find the minimum value in a given heterogeneous list.", "source": "mbpp"}
+{"text": "Write a function to convert the given snake case string to camel case string.", "source": "mbpp"}
+{"text": "Write a python function to remove odd numbers from a given list.", "source": "mbpp"}
+{"text": "Write a function to extract the nth element from a given list of tuples.", "source": "mbpp"}
+{"text": "Write a python function to check whether any value in a sequence exists in a sequence or not.", "source": "mbpp"}
+{"text": "Write a python function to find a pair with highest product from a given array of integers.", "source": "mbpp"}
+{"text": "Write a function to find common first element in given list of tuple.", "source": "mbpp"}
+{"text": "Write a python function to find the element of a list having maximum length.", "source": "mbpp"}
+{"text": "Write a function to round every number of a given list of numbers and print the total sum multiplied by the length of the list.", "source": "mbpp"}
+{"text": "Write a python function to find the cube sum of first n even natural numbers.", "source": "mbpp"}
+{"text": "Write a function to concatenate each element of tuple by the delimiter.", "source": "mbpp"}
+{"text": "Write a python function to find the average of cubes of first n natural numbers.", "source": "mbpp"}
+{"text": "Write a function to extract only the rear index element of each string in the given tuple.", "source": "mbpp"}
+{"text": "Write a function to count the number of sublists containing a particular element.", "source": "mbpp"}
+{"text": "Write a function to filter odd numbers.", "source": "mbpp"}
+{"text": "Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.", "source": "mbpp"}
+{"text": "Write a function to sort the given array by using shell sort.", "source": "mbpp"}
+{"text": "Write a function to extract the elementwise and tuples from the given two tuples.", "source": "mbpp"}
+{"text": "Write a function to find the directrix of a parabola.", "source": "mbpp"}
+{"text": "Write a function that takes two lists and returns true if they have at least one common element.", "source": "mbpp"}
+{"text": "Write a function to find the median length of a trapezium.", "source": "mbpp"}
+{"text": "Write a function to check whether the entered number is greater than the elements of the given array.", "source": "mbpp"}
+{"text": "Write a function that matches a string that has an a followed by one or more b's.", "source": "mbpp"}
+{"text": "Write a python function to find the last digit of a given number.", "source": "mbpp"}
+{"text": "Write a python function to return the negative numbers in a list.", "source": "mbpp"}
+{"text": "Write a function to remove odd characters in a string.", "source": "mbpp"}
+{"text": "Write a function to count bidirectional tuple pairs.", "source": "mbpp"}
+{"text": "Write a function to join a list of multiple integers into a single integer.", "source": "mbpp"}
+{"text": "Write a function to find the first adverb and their positions in a given sentence.", "source": "mbpp"}
+{"text": "Write a function to find the surface area of a cube of a given size.", "source": "mbpp"}
+{"text": "Write a function to find the ration of positive numbers in an array of integers.", "source": "mbpp"}
+{"text": "Write a python function to find the largest negative number from the given list.", "source": "mbpp"}
+{"text": "Write a function to trim each tuple by k in the given tuple list.", "source": "mbpp"}
+{"text": "Write a function to perform index wise multiplication of tuple elements in the given two tuples.", "source": "mbpp"}
+{"text": "Write a python function to count the occurence of all elements of list in a tuple.", "source": "mbpp"}
+{"text": "Write a function to find cubes of individual elements in a list.", "source": "mbpp"}
+{"text": "Write a function to calculate the sum of perrin numbers.", "source": "mbpp"}
+{"text": "Write a function to extract specified size of strings from a given list of string values.", "source": "mbpp"}
+{"text": "Write a function to remove all whitespaces from the given string.", "source": "mbpp"}
+{"text": "Write a function that gives loss amount on a sale if the given amount has loss else return 0.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of even factors of a number.", "source": "mbpp"}
+{"text": "Write a function that matches a word containing 'z'.", "source": "mbpp"}
+{"text": "Write a function to check whether the given month number contains 31 days or not.", "source": "mbpp"}
+{"text": "Write a function to reverse each string in a given list of string values.", "source": "mbpp"}
+{"text": "Write a python function to find the sublist having minimum length.", "source": "mbpp"}
+{"text": "Write a function to find the area of a rectangle.", "source": "mbpp"}
+{"text": "Write a function to remove uppercase substrings from a given string.", "source": "mbpp"}
+{"text": "Write a python function to get the first element of each sublist.", "source": "mbpp"}
+{"text": "Write a python function to count the upper case characters in a given string.", "source": "mbpp"}
+{"text": "Write a function to find all possible combinations of the elements of a given list.", "source": "mbpp"}
+{"text": "Write a function to find the maximum product subarray of the given array.", "source": "mbpp"}
+{"text": "Write a function to check if all values are same in a dictionary.", "source": "mbpp"}
+{"text": "Write a function to drop empty items from a given dictionary.", "source": "mbpp"}
+{"text": "Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.", "source": "mbpp"}
+{"text": "Write a function to find the pairwise addition of the neighboring elements of the given tuple.", "source": "mbpp"}
+{"text": "Write a python function to find the product of the array multiplication modulo n.", "source": "mbpp"}
+{"text": "Write a python function to check whether the given list contains consecutive numbers or not.", "source": "mbpp"}
+{"text": "Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.", "source": "mbpp"}
+{"text": "Write a function to replace characters in a string.", "source": "mbpp"}
+{"text": "Write a function to sort a dictionary by value.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of the largest and smallest value in a given array.", "source": "mbpp"}
+{"text": "Write a python function to convert the given string to lower case.", "source": "mbpp"}
+{"text": "Write a function to remove lowercase substrings from a given string.", "source": "mbpp"}
+{"text": "Write a python function to find the first digit of a given number.", "source": "mbpp"}
+{"text": "Write a python function which takes a list of integers and only returns the odd ones.", "source": "mbpp"}
+{"text": "Write a python function to find the difference between the sum of cubes of the first n natural numbers and the sum of the first n natural numbers.", "source": "mbpp"}
+{"text": "Write a python function to count the number of pairs whose xor value is odd.", "source": "mbpp"}
+{"text": "Write a function to toggle the case of all characters in a string.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of the per-digit difference between two integers.", "source": "mbpp"}
+{"text": "Write a function to find the sum of the largest contiguous sublist in the given list.", "source": "mbpp"}
+{"text": "Write a function to find the union of the elements of two given tuples and output them in sorted order.", "source": "mbpp"}
+{"text": "Write a python function to find the length of the longest sublists.", "source": "mbpp"}
+{"text": "Write a function to extract values between quotation marks from a string.", "source": "mbpp"}
+{"text": "Write a python function which takes a list of integers and counts the number of possible unordered pairs where both elements are unequal.", "source": "mbpp"}
+{"text": "Write a python function to split a string into characters.", "source": "mbpp"}
+{"text": "Write a function to get the sum of the digits of a non-negative integer.", "source": "mbpp"}
+{"text": "Write a function to check whether a specified list is sorted or not.", "source": "mbpp"}
+{"text": "Write a function to create a list of N empty dictionaries.", "source": "mbpp"}
+{"text": "Write a function to sort each sublist of strings in a given list of lists.", "source": "mbpp"}
+{"text": "Write a python function to remove duplicate numbers from a given number of lists.", "source": "mbpp"}
+{"text": "Write a python function to calculate the product of the unique numbers in a given list.", "source": "mbpp"}
+{"text": "Write a function to find the surface area of a cylinder.", "source": "mbpp"}
+{"text": "Write a python function to check whether a list is sublist of another or not.", "source": "mbpp"}
+{"text": "Write a python function to find the last digit in factorial of a given number.", "source": "mbpp"}
+{"text": "Write a function to interleave 3 lists of the same length into a single flat list.", "source": "mbpp"}
+{"text": "Write a function to find the dissimilar elements in the given two tuples.", "source": "mbpp"}
+{"text": "Write a function to remove uneven elements in the nested mixed tuple.", "source": "mbpp"}
+{"text": "Write a python function to find the surface area of a square pyramid with a given base edge and height.", "source": "mbpp"}
+{"text": "Write a function to check if a dictionary is empty", "source": "mbpp"}
+{"text": "Write a function which returns nth catalan number.", "source": "mbpp"}
+{"text": "Write a function to find the first adverb ending with ly and its positions in a given string.", "source": "mbpp"}
+{"text": "Write a function to find the n most expensive items in a given dataset.", "source": "mbpp"}
+{"text": "Write a python function to split a list at the nth eelment and add the first part to the end.", "source": "mbpp"}
+{"text": "Write a function to convert a list to a tuple.", "source": "mbpp"}
+{"text": "Write a python function to find the difference between largest and smallest value in a given list.", "source": "mbpp"}
+{"text": "Write a function to find perfect squares between two given numbers.", "source": "mbpp"}
+{"text": "Write a function to convert polar coordinates to rectangular coordinates.", "source": "mbpp"}
+{"text": "Write a python function to interchange the first and last elements in a list.", "source": "mbpp"}
+{"text": "Write a python function to find the sum of the product of consecutive binomial co-efficients.", "source": "mbpp"}
+{"text": "Write a function to remove leading zeroes from an ip address.", "source": "mbpp"}
+{"text": "Write a function to find the difference of the first even and first odd number of a given list.", "source": "mbpp"}
+{"text": "Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.", "source": "mbpp"}
+{"text": "Write a function to find the size in bytes of the given tuple.", "source": "mbpp"}
+{"text": "Write a function to find kth element from the given two sorted arrays.", "source": "mbpp"}
+{"text": "Write a function to check whether the given number is armstrong or not.", "source": "mbpp"}
+{"text": "Write a function to find sum and average of first n natural numbers.", "source": "mbpp"}
+{"text": "Write a python function to check whether the given number is even or not.", "source": "mbpp"}
