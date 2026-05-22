@@ -380,6 +380,52 @@ class Dispatcher:
 
         return fragments
 
+    # -- Mode 3: plan decomposition ---------------------------------------
+
+    def decompose(self, goal: str, specialists: list[str] | None = None) -> dict:
+        """Decompose a user goal into ordered, dispatchable steps.
+
+        Args:
+            goal: English goal description.
+            specialists: Optional list of specialist names available.
+
+        Returns:
+            Dict with 'steps' key containing ordered step list.
+            Each step: {id, intent, depends_on}
+        """
+        if specialists is None:
+            specialists = [
+                "python-specialist", "sql-specialist",
+                "math-specialist", "tool-call",
+            ]
+
+        prompt = MODE3_PROMPT.format(
+            goal=goal,
+            specialists=", ".join(specialists),
+        )
+
+        try:
+            response = ollama.generate(
+                model=self.model,
+                prompt=prompt,
+                options={"temperature": 0.2, "num_predict": 512},
+            )
+            raw = response["response"].strip()
+            raw = re.sub(r"^```(?:json)?\s*", "", raw)
+            raw = re.sub(r"\s*```$", "", raw)
+            plan = json.loads(raw)
+            if "steps" in plan:
+                return plan
+        except Exception:
+            pass
+
+        # Fallback: single-step plan using the goal directly
+        return {
+            "steps": [
+                {"id": 0, "intent": goal, "depends_on": []}
+            ]
+        }
+
 
 MODE2_PROMPT = """You fill in natural-language placeholders in generated code.
 
@@ -389,3 +435,29 @@ Output as a JSON object mapping ID to text. No markdown, no explanation.
 {batch}
 
 Generate exactly {count} fragments as JSON: {{"__NL_0__": "...", "__NL_1__": "..."}}"""
+
+
+MODE3_PROMPT = """You decompose goals into ordered, dispatchable steps.
+
+Available specialists and tools:
+- python-specialist: Python code generation, debugging, refactoring
+- sql-specialist: SQL query generation, optimization
+- math-specialist: Mathematical problem solving
+- tool-call: Execute Python, read/write files, run bash commands, list directories
+
+For the given goal, produce a JSON plan with ordered steps.
+Each step has: id (int), intent (string describing what to do), depends_on (list of step ids that must complete first).
+
+Rules:
+- Steps must be ordered: a step can only depend on steps with lower ids.
+- Each step's intent should clearly indicate which specialist or tool to use.
+- If a step produces output needed by another, use depends_on.
+- Keep plans small and focused (3-7 steps maximum).
+
+Output ONLY valid JSON. No explanation, no markdown fences.
+
+Goal: {goal}
+
+Specialists available: {specialists}
+
+Plan as JSON:"""
