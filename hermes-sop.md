@@ -2,7 +2,7 @@
 **Project:** Personal AI Cluster  
 **Agent:** Hermes Agent (Nous Research)  
 **Owner:** Michael  
-**Version:** 1.1  
+**Version:** 1.0  
 
 ---
 
@@ -49,7 +49,6 @@ Always ask before:
 - Overwriting model files
 - Modifying system configuration
 - Installing system-level packages
-- Running `systemctl edit` or similar service modifications
 - Changing Ollama modelfiles for existing working models
 
 ---
@@ -66,10 +65,6 @@ Compute:
   iGPU:  AMD Radeon 680M              ← secondary compute
   CPU:   AMD Ryzen 5 6600H (6c/12t)  ← orchestration + CPU models
 
-Memory:
-  RAM:   8GB DDR5                    ← tight; budget carefully
-  VRAM:  4GB GDDR6 (dGPU)            ← see spec §2 for budget
-
 Storage:
   NVMe:  256GB (~3.5GB/s)            ← model storage + project
 
@@ -79,8 +74,6 @@ Inference:
   CUDA:        12.4
   Monitoring:  nvidia-smi
 ```
-
-**Memory discipline:** 8GB RAM is the second tightest constraint after VRAM. Before running anything that spawns subprocesses (tool sandbox, fine-tuning jobs, parallel inference), check `free -h` and consider whether other workloads need to pause. See spec §2 for the full RAM allocation table.
 
 Always verify GPU is being used during inference:
 ```bash
@@ -95,22 +88,16 @@ watch -n 1 nvidia-smi
 This is a multi-model pipeline, not a single chatbot. Every component has a specific role:
 
 ```
-DISPATCHER      ← Single NL model, three modes:
-                   Mode 1: English → JSON contract (routing)
-                   Mode 2: NL requests → fragments (generation)
-                   Mode 3: Goal → plan steps (decomposition)
+DISPATCHER      ← NL model, two modes (routing + NL generation)
 SPECIALISTS     ← Domain models (Python, SQL, Math)
 SCANNER         ← Deterministic, finds <NL> placeholders
 ASSEMBLER       ← Deterministic, substitutes final output
-TOOL MODULE     ← Routing target of Dispatcher (schema = tool-call-v1),
-                  invoked via the agentic loop — NOT a pipeline stage
+TOOL MODULE     ← Agentic tools (execute code, file ops, search)
 ```
 
 **Critical rule:** Specialists never receive raw English. All input to specialists is a typed JSON contract using CDV vocabulary. If you find yourself passing English text directly to a specialist, stop — the Dispatcher is missing.
 
 **Critical rule:** Every English fragment in specialist output is a `<NL>` placeholder. Specialists do not generate English strings, comments, docstrings, or variable names directly.
-
-**Critical rule:** Tools are not a pipeline stage. They are invoked when the Dispatcher (Mode 1) routes a request to `tool-call-v1`. Inside the agentic loop only.
 
 ---
 
@@ -158,140 +145,125 @@ Before using OpenRouter:
 8. Report phase completion to Michael
 ```
 
-### Phase 1 Verification Gate (Run First)
+### The Core Experiment (Read This First)
 
-Before starting Phase 2 work, confirm Phase 1 is complete. The spec marks hardware, OS, and CUDA as done, but Ollama and Hermes Agent setup may not be. Run:
+The goal of this project is to prove a hypothesis:
 
+> A model trained from scratch on a constrained vocabulary and narrow domain can outperform a general model 10-75x its size on specific tasks.
+
+Every phase from 4 onwards serves this experiment. Do not lose sight of it.
+
+### Phase 4 — CDV Discovery (Active Next)
+
+**Goal:** Find the minimum set of English words that maximally predicts Python code output.
+
+Execute in this order:
+
+**Step 1: Collect corpus**
 ```bash
-# Verify Ollama installed and GPU inference works
-ollama --version || echo "❌ Ollama not installed"
-ollama list
-nvidia-smi
-# Quick GPU inference check (small model only)
-ollama run qwen2.5:0.5b "test" --verbose 2>&1 | grep -i "gpu\|cuda"
+# Pull Python task examples from multiple sources
+# Target: 10,000+ real Python task descriptions
+# Sources: HumanEval, MBPP, CodeSearchNet, synthetic
+# Store as: data/corpus/python_tasks.jsonl
 ```
 
-If anything in Phase 1 is unchecked, **stop and report to Michael**. Do not proceed to Phase 2 work with an incomplete foundation.
-
-### Phase 2 — Core Pipeline (Active)
-
-Execute in this exact order:
-
-**Step 1: Project structure + environment + spec placement**
-
-The spec and SOP files are provided by Michael at `/tmp/ai-cluster-spec.md` and `/tmp/hermes-sop.md` (or another path he specifies — confirm before running). They must end up in the project root.
-
-```bash
-# Create directory structure
-mkdir -p ~/llm-cluster/{core/schemas,specialists,tools/builtin,cdv,training,models/modelfiles,agent,tests}
-cd ~/llm-cluster
-
-# Place spec and SOP in project root (confirm source path with Michael)
-cp /tmp/ai-cluster-spec.md ./ai-cluster-spec.md
-cp /tmp/hermes-sop.md ./hermes-sop.md
-
-# Initialize git
-git init
-
-# Create .gitignore
-cat > .gitignore << 'EOF'
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-.venv/
-venv/
-env/
-*.egg-info/
-.pytest_cache/
-
-# Models and training data
-models/weights/
-models/*.gguf
-models/*.bin
-models/*.safetensors
-training/data/raw/
-training/checkpoints/
-*.ckpt
-
-# Local config
-config.local.py
-.env
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-EOF
-
-# Set up Python virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Create initial requirements.txt
-cat > requirements.txt << 'EOF'
-pydantic>=2.0
-ollama
-langgraph
-sqlmodel
-scikit-learn
-numpy
-pytest
-gradio
-EOF
-
-pip install -r requirements.txt
-
-# Initial commit
-git add -A
-git commit -m "phase2: project structure, venv, gitignore, spec placed"
-```
-
-**Note on Debian 13 + pip:** Debian 13 enforces PEP 668 — `pip install` outside a venv will fail with "externally-managed-environment". Always activate `.venv` before installing. Never use `--break-system-packages` without confirming with Michael.
-
-**Step 2: Pydantic schemas**
-
-Create `core/schemas/` files per spec §8. Each schema maps exactly to the JSON contracts in `ai-cluster-spec.md` §4. Use Pydantic v2. No schema should accept raw English strings in intent fields — use `Literal` types or `Enum` where CDV vocabulary is known.
-
-**Step 3: Dispatcher skeleton**
-
-- Mode 1: accepts English string, returns validated Pydantic contract (serializable to the JSON contracts in spec §4)
-- Mode 2: accepts batched NL requests, returns fragment map
-- Mode 3 stub: deferred to Phase 3 (only needed once multi-step plans appear)
-- Initially: use rule-based routing, model inference as fallback
-- Ollama model: start with `qwen2.5:1.5b` as placeholder
-
-**Important sizing note:** The dev placeholder (`qwen2.5:1.5b` at INT4) consumes ~1GB VRAM — about 4x the post-fine-tuning target of ~250MB documented in spec §2. This is expected and acceptable during Phase 2-3. The dev-mode VRAM budget in spec §2 accounts for this. Do not panic when `nvidia-smi` shows ~2.4GB total occupancy with dispatcher + Python specialist both warm — that is the planned state.
-
-**Step 4: Python specialist wrapper**
-- Thin Python class around Ollama API call
-- Accepts Python specialist schema
-- Returns raw model output (skeleton + placeholders)
-- Model: `qwen2.5-coder:1.5b` (~700-900MB at INT4)
-
-**Step 5: Placeholder Scanner**
-- Pure Python, no model
-- Regex-based `<NL ...>` detection
-- Returns `(template_string, List[NLRequest])`
-
-**Step 6: Assembler**
-- Pure Python, no model
-- Accepts template + fragment map
-- Returns final assembled output
-
-**Step 7: End-to-end test**
+**Step 2: Strip known vocabulary**
 ```python
-result = pipeline.run("write a Python function to sort a list of dicts by date")
-assert "<NL" not in result          # all placeholders filled
-assert "def " in result             # actual Python generated
-print(result)                       # inspect quality
+import keyword, builtins
+KNOWN = set(keyword.kwlist) | set(dir(builtins))
+# Remove all Layer 1 + Layer 2 words from corpus
+# Only unknown English words remain
+```
+
+**Step 3: Run NMF analysis**
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import NMF
+# Find latent intent dimensions
+# Top words per dimension = CDV candidates
+```
+
+**Step 4: Lasso regression**
+```python
+from sklearn.linear_model import LassoCV
+# Find minimum word set that predicts code output
+# Non-zero coefficients = potent words
+```
+
+**Step 5: Build custom tokenizer**
+```python
+import sentencepiece as spm
+# Train on: CDV delta + Python keywords + builtins
+# Target vocabulary: ~555 tokens total
+# Validate: encode/decode roundtrip on test corpus
+```
+
+**Step 6: Document CDV**
+```bash
+# Save to cdv/python_cdv.json with potency scores
+# This file is the foundation of Phase 5
+```
+
+### Phase 5 — Training Data Generation
+
+**Goal:** 50,000+ high quality CDV contract → Python code pairs.
+
+- Use OpenCode Go for generation (batch jobs, not interactive)
+- Confirm budget with Michael before starting generation
+- Every generated example must pass:
+  - Python syntax check (`ast.parse`)
+  - CDV compliance check (no English outside `<NL>` tokens)
+- Store as `data/training/python_pairs.jsonl`
+- Run baseline benchmark on qwen2.5-coder:1.5b BEFORE training
+- Record baseline scores in `training/baseline_results.json`
+
+### Phase 6 — Scratch Training: Python Specialist v1
+
+**Goal:** Train smallest model that beats qwen2.5-coder:1.5b on narrow Python tasks.
+
+**Architecture:** GPT-2 style transformer
+**Framework:** nanoGPT or litGPT
+**Target size:** 10-50M parameters
+**Tokenizer:** Custom CDV tokenizer from Phase 4
+
+Critical rules:
+- Start with the SMALLEST viable size (10M params)
+- Benchmark before scaling up
+- Save checkpoints every epoch
+- Never train without Michael's confirmation first
+- Document every training run in `training/runs/`
+
+**Step 1: Architecture config**
+```python
+# Start conservative:
+n_layer = 6
+n_head = 6
+n_embd = 192
+vocab_size = 555       # CDV tokenizer
+block_size = 512       # max context
+# ~10M parameters
+```
+
+**Step 2: Training loop**
+```bash
+# Estimated training time on RTX 3050:
+# 10M model, 50K examples: ~6-12 hours
+# Monitor: nvidia-smi, training loss, validation loss
+# Stop if validation loss diverges from training loss
+```
+
+**Step 3: Evaluate**
+```bash
+# Run same benchmark as qwen2.5-coder:1.5b baseline
+# Compare scores
+# If CDV specialist wins on narrow tasks → hypothesis supported
+```
+
+**Step 4: Export and integrate**
+```bash
+# Convert to GGUF for Ollama
+# Replace qwen2.5-coder:1.5b in pipeline
+# Run full pipeline tests
 ```
 
 ---
@@ -325,7 +297,6 @@ def test_assembler_substitutes():
 Run full test suite before marking any phase complete:
 ```bash
 cd ~/llm-cluster
-source .venv/bin/activate
 python -m pytest tests/ -v
 ```
 
@@ -348,15 +319,13 @@ sudo systemctl status ollama
 sudo systemctl restart ollama
 
 # Set keep-alive for most-used model (Python specialist)
-# Requires sudo systemctl edit ollama.service — CONFIRM WITH MICHAEL FIRST
-# Add to override:
-# [Service]
+# Add to /etc/systemd/system/ollama.service:
 # Environment="OLLAMA_KEEP_ALIVE=30m"
 ```
 
 **Model naming convention for this project:**
 ```
-dispatcher          ← NL routing + generation + planning (all 3 modes)
+dispatcher          ← NL routing + generation model
 python-specialist   ← Python code generation
 sql-specialist      ← SQL generation
 math-specialist     ← Math/logic
@@ -388,8 +357,6 @@ Never commit broken code. If a branch is exploratory, say so:
 git checkout -b experiment/bitnet-prototype
 ```
 
-**Never commit:** model weight files, training datasets, virtual environments, or `__pycache__` directories. The `.gitignore` created in Phase 2 Step 1 should cover these; verify with `git status` before any commit.
-
 ---
 
 ## 10. Key Architecture Decisions (Do Not Override)
@@ -398,7 +365,7 @@ These have been explicitly decided. Do not change without Michael's approval:
 
 | Decision | Choice | Reason |
 |---|---|---|
-| Dispatcher/Translator/Planner | Single merged module (3 modes) | Co-dependent, same model |
+| Dispatcher/Translator | Single merged module | Co-dependent, same model |
 | Inter-module format | JSON contracts | Eliminates ambiguity |
 | English in specialists | `<NL>` placeholders only | Domain purity |
 | NL requests | Batched, single model call | Efficiency |
@@ -407,12 +374,6 @@ These have been explicitly decided. Do not change without Michael's approval:
 | CDV discovery | NMF + Lasso on corpus | Mathematically optimal |
 | Storage | SQLite | Zero config, local |
 | Orchestration | LangGraph | State machine pattern |
-| Python environment | venv + requirements.txt | Debian 13 PEP 668 compliance |
-| Tools | Routing target, not pipeline stage | See spec §4.5 |
-
-**Models explicitly out of scope** (do not pull these — they exceed VRAM budget):
-- Phi-3 Mini (3.8B) — does not fit 4GB GPU
-- sqlcoder-7b-2 (7B) — does not fit 4GB GPU alongside dispatcher
 
 ---
 
@@ -442,8 +403,6 @@ Proposed fix: [option A / option B]
 🎉 Phase [N] complete.
 All tests passing: [yes/no]
 Models confirmed working: [list]
-VRAM peak observed: [GB]
-RAM peak observed: [GB]
 Ready for Phase [N+1]: [yes/no]
 Spec updated: [yes/no]
 ```
@@ -454,21 +413,22 @@ Spec updated: [yes/no]
 
 ```
 ❌ Pass raw English directly to a specialist model
+❌ Pass raw English directly to a scratch-trained specialist
+❌ Fine-tune or modify an existing model — scratch only from Phase 4
 ❌ Bypass the Dispatcher for routing decisions
 ❌ Generate English strings inside specialist output
-❌ Treat tools as a pipeline stage instead of a routing target
-❌ Use OpenRouter for routine tasks
+❌ Use OpenCode Go for routine tasks
+❌ Use OpenRouter without confirming budget with Michael
+❌ Start training data generation without budget confirmation
+❌ Start a training run without Michael's confirmation
+❌ Train without saving checkpoints
+❌ Replace a working model in the pipeline without benchmarking first
 ❌ Make architectural changes without flagging to Michael
-❌ Delete model files without confirmation
-❌ Run fine-tuning jobs without confirming hardware is ready
+❌ Delete model files or training data without confirmation
 ❌ Commit broken/untested code to main branch
-❌ Commit model weights, training data, or .venv to git
 ❌ Ignore failing tests and proceed anyway
 ❌ Install system packages without confirming with Michael
-❌ Run `systemctl edit` without confirming with Michael
-❌ Use pip install outside the project venv
-❌ Pull Phi-3 Mini or sqlcoder-7b (exceed VRAM budget)
-❌ Proceed to Phase 2 work with Phase 1 items unchecked
+❌ Scale up model size before benchmarking the smaller version first
 ```
 
 ---
@@ -480,31 +440,25 @@ Run this at the start of every session:
 ```bash
 # 1. Confirm system is healthy
 nvidia-smi
-free -h                              # RAM check; 8GB ceiling matters
 systemctl status ollama
 
-# 2. Verify Phase 1 prerequisites (only matters early in project)
-ollama --version
-ollama list
+# 2. Check project state
+cd ~/llm-cluster
+git log --oneline -10
+git status
 
-# 3. Check project state (if project dir exists)
-cd ~/llm-cluster 2>/dev/null && {
-  source .venv/bin/activate 2>/dev/null
-  git log --oneline -10
-  git status
-  python -m pytest tests/ -v 2>/dev/null || echo "No tests yet"
-}
+# 3. Run existing tests
+python -m pytest tests/ -v 2>/dev/null || echo "No tests yet"
 
 # 4. Read spec for current phase
-cat ~/llm-cluster/ai-cluster-spec.md | grep -A 30 "Phase" | head -60
+cat ai-cluster-spec.md | grep -A 20 "Current"
 ```
 
 Then report to Michael:
 - Current phase
 - Last completed task
 - Next task
-- Any Phase 1 items still unchecked
-- Any system health issues (low RAM, GPU not detected, Ollama down)
+- Any issues found
 
 ---
 
@@ -516,7 +470,5 @@ Then report to Michael:
 | This SOP | `~/llm-cluster/hermes-sop.md` | Behavioral rules |
 | Ollama models | `~/.ollama/models/` | Local model storage |
 | Project code | `~/llm-cluster/` | All source code |
-| Python venv | `~/llm-cluster/.venv/` | Isolated dependencies |
 | NVIDIA monitor | `nvidia-smi` / `watch -n1 nvidia-smi` | GPU health |
-| RAM monitor | `free -h` / `htop` | System RAM health |
 | System logs | `journalctl -f` | System issues |
