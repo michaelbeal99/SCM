@@ -6159,3 +6159,38 @@
 {"text": "Write a program to calculate the maximum element in a list of integers, excluding any elements that are negative, and round them up to the nearest integer.", "source": "synthetic"}
 {"text": "Implement a function that takes two lists as input and returns a new list containing only the elements that are not present in both lists.", "source": "synthetic"}
 {"text": "Write a program to read data from a CSV file and print each row, excluding any empty rows, and convert them to lowercase, and round them up to the nearest integer.", "source": "synthetic"}
+{"text": "Implement a class to manage a simple banking account with methods for deposit, withdraw, and balance retrieval.", "source": "synthetic"}
+{"text": "Create an abstract base class `Shape` with methods `area()` and `perimeter()`. Implement subclasses like `Circle`, `Rectangle`, and `Square`.", "source": "synthetic"}
+{"text": "Write a decorator that logs the execution time of a function.", "source": "synthetic"}
+{"text": "Define a generator function to create an infinite sequence of Fibonacci numbers.", "source": "synthetic"}
+{"text": "Implement a context manager for managing file operations, ensuring files are properly closed after usage.", "source": "synthetic"}
+{"text": "Create a class to handle HTTP requests using asyncio.", "source": "synthetic"}
+{"text": "Use type hints to define a function that accepts a list of strings and returns a dictionary.", "source": "synthetic"}
+{"text": "Utilize the `dataclasses` module to create classes with automatic generation of `__init__`, `__repr__`, and `__eq__` methods.", "source": "synthetic"}
+{"text": "Create a property decorator to allow read-only access to an attribute.", "source": "synthetic"}
+{"text": "Design a class that supports inheritance, overriding methods in subclasses.", "source": "synthetic"}
+{"text": "Implement the Singleton pattern using decorators.", "source": "synthetic"}
+{"text": "Write a function to find all prime numbers within a given range.", "source": "synthetic"}
+{"text": "Create a module to manage a simple database with classes for `User`, `Post`, and `Comment`.", "source": "synthetic"}
+{"text": "Use async/await to handle HTTP requests concurrently.", "source": "synthetic"}
+{"text": "Define a class that manages user accounts, allowing methods for signing up, logging in, and password recovery.", "source": "synthetic"}
+{"text": "Implement a class to simulate a simple physics simulation, including gravitational force calculations.", "source": "synthetic"}
+{"text": "Write a function to generate a sequence of prime numbers within a given range using the Sieve of Eratosthenes algorithm.", "source": "synthetic"}
+{"text": "Create a module to manage a library with classes for `Book`, `Author`, and `Publisher`.", "source": "synthetic"}
+{"text": "Define a property decorator to allow read-only access to an attribute in a class.", "source": "synthetic"}
+{"text": "Implement a class to manage a simple inventory system, including methods for adding, removing, and updating items.", "source": "synthetic"}
+{"text": "Write a function to determine the maximum subarray sum using Kadane's algorithm.", "source": "synthetic"}
+{"text": "Create a module to manage a blog with classes for `Post`, `Category`, and `Comment`.", "source": "synthetic"}
+{"text": "Use the `dataclasses` module to create classes with automatic generation of `__init__`, `__repr__`, and `__eq__` methods.", "source": "synthetic"}
+{"text": "Define a property decorator to allow read-only access to an attribute in a class.", "source": "synthetic"}
+{"text": "Implement a class to manage a simple user authentication system, including methods for registering, logging in, and resetting passwords.", "source": "synthetic"}
+{"text": "Write a function to find all palindromic numbers within a given range.", "source": "synthetic"}
+{"text": "Create a module to manage a library with classes for `Book`, `Author`, and `Publisher`.", "source": "synthetic"}
+{"text": "Define a property decorator to allow read-only access to an attribute in a class.", "source": "synthetic"}
+{"text": "Implement a class to manage a simple inventory system, including methods for adding, removing, and updating items.", "source": "synthetic"}
+{"text": "Write a function to determine the maximum subarray sum using Kadane's algorithm.", "source": "synthetic"}
+{"text": "Create a module to manage a blog with classes for `Post`, `Category`, and `Comment`.", "source": "synthetic"}
+{"text": "Use the `dataclasses` module to create classes with automatic generation of `__init__`, `__repr__`, and `__eq__` methods.", "source": "synthetic"}
+{"text": "Define a property decorator to allow read-only access to an attribute in a class.", "source": "synthetic"}
+{"text": "Implement a class to manage a simple user authentication system, including methods for registering, logging in, and resetting passwords.", "source": "synthetic"}
+{"text": "Write a function to find all prime numbers within a given range using the Sieve of Eratosthenes algorithm.", "source": "synthetic"}

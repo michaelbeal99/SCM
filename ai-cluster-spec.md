@@ -468,13 +468,13 @@ llm-cluster/
 - [x] Multi-specialist routing confirmed
 
 ### Phase 4 — CDV Discovery
-- [ ] Collect Python task corpus (10,000+ real examples)
-- [ ] Strip Layer 1 + Layer 2 vocabulary from corpus
-- [ ] TF-IDF matrix over remaining words
-- [ ] NMF analysis → latent intent dimensions
-- [ ] Lasso regression → minimum predictive word set
-- [ ] Mutual information scoring → rank by potency
-- [ ] Final CDV delta: target ~200 words
+- [x] Collect Python task corpus (10,000+ real examples)
+- [x] Strip Layer 1 + Layer 2 vocabulary from corpus
+- [x] TF-IDF matrix over remaining words
+- [x] NMF analysis → latent intent dimensions
+- [x] Lasso regression → minimum predictive word set
+- [x] Mutual information scoring → rank by potency
+- [x] Final CDV delta: target ~200 words
 - [ ] Build custom SentencePiece tokenizer (CDV + Python vocab)
 - [ ] Validate tokenizer: encode/decode roundtrip on test corpus
 - [ ] Document CDV in cdv/python_cdv.json
