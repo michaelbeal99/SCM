@@ -535,12 +535,12 @@ Phase 1 must be fully complete before Hermes begins Phase 2. Hermes verifies all
 - [x] End-to-end: English → Python code working
 
 ### Phase 3 — Specialists + Tools
-- [ ] SQL specialist
-- [ ] Math specialist
-- [ ] Tool registry + sandbox
-- [ ] Dispatcher Mode 3 (plan decomposition)
-- [ ] Basic agentic loop
-- [ ] Multi-specialist routing confirmed
+- [x] SQL specialist
+- [x] Math specialist
+- [x] Tool registry + sandbox
+- [x] Dispatcher Mode 3 (plan decomposition)
+- [x] Basic agentic loop
+- [x] Multi-specialist routing confirmed
 
 ### Phase 4 — CDV + Fine-tuning
 - [ ] Python CDV corpus analysis (NMF/Lasso)
