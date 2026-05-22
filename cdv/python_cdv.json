@@ -15,6 +15,30 @@
     "lasso_nonzero": 98,
     "mi_significant_words": 1135
   },
+  "tokenizer": {
+    "type": "sentencepiece_unigram",
+    "model_path": "cdv/tokenizer/cdv_python.model",
+    "vocab_size": 555,
+    "layers": {
+      "layer1_python_keywords": 35,
+      "layer2_python_builtins": 75,
+      "layer3_cdv_delta": 200,
+      "control_tokens": 7,
+      "subword_units": 238
+    },
+    "coverage": {
+      "python_keywords_single_token": 35,
+      "python_builtins_single_token": 75,
+      "cdv_words_single_token": 135,
+      "cdv_words_roundtrip": 200
+    },
+    "training": {
+      "corpus_lines": 2702,
+      "code_samples": 702,
+      "task_descriptions": 2000,
+      "model_size_bytes": 252306
+    }
+  },
   "words": [
     {
       "word": "create",

@@ -1,0 +1,555 @@
+<pad>	0
+<s>	0
+</s>	0
+<unk>	0
+</NL>	0
+<BOS>	0
+<EOS>	0
+<NL>	0
+<PAD>	0
+<SEP>	0
+<UNK>	0
+False	0
+None	0
+True	0
+abs	0
+aiter	0
+alerting user	0
+algorithm	0
+algorithm solve	0
+all	0
+and	0
+anext	0
+any	0
+api	0
+application	0
+arr	0
+arr mid	0
+arr start	0
+as	0
+ascending	0
+ascending order	0
+ascii	0
+assert	0
+async	0
+asynchronous	0
+audit	0
+augmentation	0
+authentication authorization	0
+authorization	0
+await	0
+backtracking	0
+balance	0
+based	0
+based access	0
+based length	0
+bin	0
+binary	0
+binary search	0
+blocking	0
+bool	0
+break	0
+breakpoint	0
+built	0
+bytearray	0
+bytes	0
+calculate	0
+calculate even	0
+calculate factorial	0
+calculate total	0
+calculates	0
+calculates even	0
+calculation	0
+callable	0
+check	0
+check palindrome	0
+check whether	0
+chr	0
+class	0
+classmethod	0
+client	0
+command	0
+common	0
+compile	0
+complex	0
+compression encryption	0
+concurrently	0
+connections	0
+contains	0
+continue	0
+convert	0
+copyright	0
+create	0
+create methods	0
+create program	0
+create script	0
+creating	0
+credits	0
+csv	0
+customer product	0
+dataset	0
+deadlocks	0
+def	0
+del	0
+delattr	0
+depth	0
+depth search	0
+description	0
+design	0
+detection	0
+develop	0
+develop rate	0
+dict	0
+dictionary	0
+dir	0
+divisible	0
+divmod	0
+dynamic	0
+dynamic programming	0
+elements	0
+elif	0
+else	0
+email	0
+end	0
+ensuring original	0
+enumerate	0
+eval	0
+evaluate performance	0
+even	0
+even numbers	0
+event handling	0
+except	0
+exec	0
+executes tasks	0
+exit	0
+expressions	0
+extract	0
+extract specific	0
+factorial	0
+features	0
+fibonacci	0
+fibonacci sequence	0
+filename	0
+files	0
+filter	0
+finally	0
+finds	0
+flask	0
+flexible	0
+float	0
+for	0
+format	0
+from	0
+frozenset	0
+gcd	0
+generate	0
+generate random	0
+generates	0
+generates random	0
+generator	0
+generator yields	0
+genre	0
+getattr	0
+global	0
+globals	0
+graph dijkstra	0
+greedy	0
+handle	0
+hasattr	0
+hash	0
+help	0
+hex	0
+http	0
+https www	0
+id	0
+if	0
+implement	0
+implement greedy	0
+import	0
+in	0
+include methods	0
+input	0
+int	0
+integers	0
+is	0
+isinstance	0
+issubclass	0
+iter	0
+json	0
+knapsack problem	0
+lambda	0
+learning	0
+learning model	0
+len	0
+letters	0
+library	0
+license	0
+limit	0
+limiter limits	0
+list	0
+lists	0
+locals	0
+longest	0
+longest common	0
+lowercase letters	0
+map	0
+max	0
+maximum	0
+memoryview	0
+messages	0
+methods	0
+mid	0
+min	0
+model	0
+module	0
+monitoring logging	0
+named	0
+next	0
+non negative	0
+nonlocal	0
+not	0
+nth	0
+numbers	0
+numbers integers	0
+object	0
+oct	0
+odd	0
+odd numbers	0
+open	0
+operations	0
+or	0
+ord	0
+order	0
+original distribution	0
+pass	0
+password	0
+person	0
+pow	0
+prefix	0
+prime	0
+prime numbers	0
+print	0
+prints	0
+problem	0
+processing	0
+program	0
+programming	0
+property	0
+queue	0
+quit	0
+raise	0
+random	0
+range	0
+ratio evaluate	0
+reads	0
+recursion	0
+recursive	0
+recursive approach	0
+recursive calculate	0
+regular	0
+regular expressions	0
+repr	0
+represent simple	0
+requests	0
+requests per	0
+restful	0
+return	0
+reversed	0
+round	0
+salary	0
+scikit	0
+script	0
+script reads	0
+search	0
+second	0
+sequence	0
+server	0
+set	0
+setattr	0
+simple	0
+slice	0
+solution	0
+solve	0
+sort	0
+sort dictionaries	0
+sorted	0
+specific	0
+specified	0
+specified limit	0
+stack	0
+start	0
+start end	0
+staticmethod	0
+str	0
+strings	0
+subsequence	0
+sum	0
+super	0
+support	0
+supports	0
+task	0
+task create	0
+task description	0
+tasks	0
+term	0
+test	0
+text	0
+time	0
+tower hanoi	0
+tree	0
+try	0
+tuple	0
+tuples	0
+tuples based	0
+type	0
+user	0
+users	0
+uses	0
+uses asyncio	0
+validate	0
+vars	0
+warning	0
+web	0
+whether	0
+while	0
+with	0
+without sorting	0
+writes	0
+writes back	0
+www	0
+yield	0
+zip	0
+▁	-0.719715
+e	-3.90812
+.	-3.9917
+s	-4.02563
+(	-4.12149
+▁a	-4.12458
+_	-4.30624
+g	-4.36313
+▁the	-4.49222
+,	-4.67385
+n	-4.71241
+a	-4.71524
+▁to	-4.80955
+i	-4.83164
+▁of	-4.93242
+)	-5.01721
+:	-5.06867
+d	-5.07228
+▁function	-5.09946
+c	-5.11745
+t	-5.16735
+[	-5.27512
+):	-5.30403
+l	-5.30833
+'	-5.34678
+-	-5.35414
+▁=	-5.35454
+m	-5.36231
+Writ	-5.41059
+1	-5.44406
+b	-5.44471
+p	-5.47023
+▁that	-5.50975
+o	-5.54546
+]	-5.61221
+x	-5.66098
+y	-5.75171
+"	-5.76183
+u	-5.76571
+2	-5.82842
+r	-5.83911
+w	-5.8651
+er	-5.91286
+▁us	-5.94422
+*	-5.9652
+re	-5.97196
+▁given	-5.9915
+f	-6.03286
+=	-6.04894
+`	-6.08859
+▁"""	-6.0991
+▁==	-6.1126
+Implement	-6.12587
+0	-6.137
+▁number	-6.22929
+3	-6.2498
+ed	-6.25896
+k	-6.30054
+it	-6.30065
+Creat	-6.3101
+es	-6.34238
+h	-6.3618
+at	-6.42618
+▁an	-6.45212
+▁+	-6.4666
+2,	-6.46784
+])	-6.50558
+▁f	-6.52768
+count	-6.54844
+al	-6.59277
+ay	-6.59826
+▁0	-6.60344
+▁Python	-6.61257
+F	-6.63244
+1,	-6.63618
+j	-6.64
+C	-6.65772
+res	-6.66425
+ar	-6.68723
+▁data	-6.70434
+en	-6.71771
+A	-6.77522
+▁>	-6.78275
+>>	-6.79128
+file	-6.80158
+ion	-6.81612
+to	-6.82375
+S	-6.83869
+4	-6.8413
+3,	-6.87367
+le	-6.87775
+num	-6.88447
+result	-6.92032
+v	-6.92723
+L	-6.9324
+ch	-6.93814
+▁two	-6.93853
+th	-6.94659
+N	-6.957
+0,	-6.96096
+))	-6.98756
+▁are	-6.98838
+/	-6.99977
+▁be	-7.02227
+",	-7.02781
+ic	-7.03261
+lst	-7.03986
+1)	-7.04304
+')	-7.05231
+('	-7.06657
+**	-7.07036
+',	-7.07863
+([	-7.09989
+E	-7.11169
+("	-7.11639
+python	-7.11899
+st	-7.11914
++	-7.12146
+5	-7.12227
+q	-7.13375
+element	-7.14873
+P	-7.15629
+gth	-7.17235
+sub	-7.18976
+6	-7.20301
+value	-7.21031
+po	-7.21071
+digit	-7.21907
+▁take	-7.23542
+")	-7.23704
+4,	-7.2494
+eger	-7.253
+5,	-7.2627
+z	-7.26881
+app	-7.29072
+2)	-7.29431
+Dev	-7.29558
+T	-7.29764
+lop	-7.30363
+ation	-7.32672
+▁+=	-7.32719
+B	-7.35782
+>	-7.35855
+▁each	-7.36275
+first	-7.3766
+▁on	-7.37666
+ly	-7.37769
+mo	-7.38925
+()	-7.39307
+Th	-7.401
+est	-7.40289
+name	-7.40548
+7	-7.41525
+ur	-7.42933
+%	-7.43216
+ro	-7.43908
+O	-7.46577
+up	-7.46588
+[0]	-7.46737
+De	-7.46989
+9	-7.47618
+dex	-7.47696
+-1	-7.49043
+<	-7.50575
+▁should	-7.5081
+key	-7.51032
+li	-7.5399
+nums	-7.54216
+val	-7.55205
+10	-7.57029
+▁its	-7.5725
+ent	-7.57433
+▁de	-7.57544
+],	-7.58152
+You	-7.58686
+ir	-7.58741
+;	-7.61046
+M	-7.62251
+ver	-7.62809
+I	-7.64588
+tup	-7.66671
+R	-7.67221
+<=	-7.67499
+ele	-7.68792
+▁con	-7.69017
+one	-7.73052
+D	-7.73133
+Given	-7.75172
+sm	-7.75905
+\	-7.76561
+sign	-7.77973
+no	-7.78045
+esent	-7.78063
+▁than	-7.79407
+▁JSON	-7.80847
+out	-7.80903
+Use	-7.80903
+▁remov	-7.82711
+▁betwe	-7.8381
+▁[]	-7.84421
+number	-7.85017
+1):	-7.85109
+empty	-7.85325
+([1,	-7.85645
+ect	-7.86846
+8	-7.93978
+#	-7.98317
+H	-8.19584
+{	-8.21758
+}	-8.21758
+K	-8.2398
+G	-8.30959
+|	-8.38463
+➞	-8.43797
+U	-8.46467
+!	-8.55168
+V	-8.61646
+Y	-8.72088
+^	-8.83657
+X	-8.87824
+Z	-9.17298
+W	-9.36096
+?	-9.59265
+J	-9.59265
+$	-9.78356
+Q	-9.89467
+&	-9.89467
+@	-10.0197
+≤	-10.3292
+–	-11.6125
+’	-11.6125
+‘	-12.6125
+~	-12.6125
+π	-12.6125

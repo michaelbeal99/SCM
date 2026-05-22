@@ -475,9 +475,9 @@ llm-cluster/
 - [x] Lasso regression → minimum predictive word set
 - [x] Mutual information scoring → rank by potency
 - [x] Final CDV delta: target ~200 words
-- [ ] Build custom SentencePiece tokenizer (CDV + Python vocab)
-- [ ] Validate tokenizer: encode/decode roundtrip on test corpus
-- [ ] Document CDV in cdv/python_cdv.json
+- [x] Build custom SentencePiece tokenizer (CDV + Python vocab)
+- [x] Validate tokenizer: encode/decode roundtrip on test corpus
+- [x] Document CDV in cdv/python_cdv.json
 
 ### Phase 5 — Training Data Generation
 - [ ] Design CDV contract → code output pair format
