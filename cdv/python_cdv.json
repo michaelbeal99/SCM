@@ -1,0 +1,1620 @@
+{
+  "specialist": "python",
+  "total_words": 200,
+  "layers": {
+    "layer1_keywords": 37,
+    "layer2_ecosystem": 128,
+    "layer3_intent_delta": 200,
+    "total_vocabulary": 365
+  },
+  "analysis_metadata": {
+    "corpus_size": 5152,
+    "tfidf_features": 2000,
+    "nmf_topics": 20,
+    "lasso_alpha": 1.4279439327155611e-05,
+    "lasso_nonzero": 98,
+    "mi_significant_words": 1135
+  },
+  "words": [
+    {
+      "word": "create",
+      "potency": 0.69,
+      "nmf_score": 1.0,
+      "lasso_score": 0.3008,
+      "mi_score": 0.8988,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "implement",
+      "potency": 0.572,
+      "nmf_score": 0.5159,
+      "lasso_score": 0.2931,
+      "mi_score": 1.0,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "task",
+      "potency": 0.4391,
+      "nmf_score": 0.0917,
+      "lasso_score": 0.8771,
+      "mi_score": 0.2025,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "event handling",
+      "potency": 0.4,
+      "nmf_score": 0,
+      "lasso_score": 1.0,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "script",
+      "potency": 0.3509,
+      "nmf_score": 0.2343,
+      "lasso_score": 0.4571,
+      "mi_score": 0.326,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "reads",
+      "potency": 0.3459,
+      "nmf_score": 0.1882,
+      "lasso_score": 0.5572,
+      "mi_score": 0.2216,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "numbers",
+      "potency": 0.3263,
+      "nmf_score": 0.6446,
+      "lasso_score": 0,
+      "mi_score": 0.443,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "algorithm",
+      "potency": 0.3013,
+      "nmf_score": 0.1954,
+      "lasso_score": 0.3778,
+      "mi_score": 0.3052,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "program",
+      "potency": 0.2846,
+      "nmf_score": 0.1124,
+      "lasso_score": 0.3017,
+      "mi_score": 0.4339,
+      "appears_in_topics": 3
+    },
+    {
+      "word": "ensuring original",
+      "potency": 0.2764,
+      "nmf_score": 0,
+      "lasso_score": 0.6909,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "elements",
+      "potency": 0.2738,
+      "nmf_score": 0.5481,
+      "lasso_score": 0.1468,
+      "mi_score": 0.169,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "problem",
+      "potency": 0.2733,
+      "nmf_score": 0.3328,
+      "lasso_score": 0.3333,
+      "mi_score": 0.1339,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "even",
+      "potency": 0.2669,
+      "nmf_score": 0.7527,
+      "lasso_score": 0,
+      "mi_score": 0.1368,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "flask",
+      "potency": 0.2596,
+      "nmf_score": 0.1204,
+      "lasso_score": 0.4408,
+      "mi_score": 0.1572,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "task create",
+      "potency": 0.2465,
+      "nmf_score": 0,
+      "lasso_score": 0.5144,
+      "mi_score": 0.1357,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "develop",
+      "potency": 0.2425,
+      "nmf_score": 0.0903,
+      "lasso_score": 0.2715,
+      "mi_score": 0.3561,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "even numbers",
+      "potency": 0.2324,
+      "nmf_score": 0.6771,
+      "lasso_score": 0,
+      "mi_score": 0.0975,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "generate",
+      "potency": 0.2247,
+      "nmf_score": 0.5442,
+      "lasso_score": 0,
+      "mi_score": 0.2048,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "methods",
+      "potency": 0.2221,
+      "nmf_score": 0.1584,
+      "lasso_score": 0.2849,
+      "mi_score": 0.2019,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "include methods",
+      "potency": 0.2187,
+      "nmf_score": 0,
+      "lasso_score": 0.4847,
+      "mi_score": 0.0829,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "deadlocks",
+      "potency": 0.2158,
+      "nmf_score": 0,
+      "lasso_score": 0.5198,
+      "mi_score": 0.0263,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "check",
+      "potency": 0.2106,
+      "nmf_score": 0.5183,
+      "lasso_score": 0,
+      "mi_score": 0.1836,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "generates",
+      "potency": 0.2068,
+      "nmf_score": 0.4413,
+      "lasso_score": 0,
+      "mi_score": 0.248,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "dynamic",
+      "potency": 0.205,
+      "nmf_score": 0.2585,
+      "lasso_score": 0.2667,
+      "mi_score": 0.0692,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "convert",
+      "potency": 0.2028,
+      "nmf_score": 0.3594,
+      "lasso_score": 0.1424,
+      "mi_score": 0.1267,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "support",
+      "potency": 0.2021,
+      "nmf_score": 0,
+      "lasso_score": 0.5034,
+      "mi_score": 0.0024,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "supports",
+      "potency": 0.1998,
+      "nmf_score": 0,
+      "lasso_score": 0.4996,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "search",
+      "potency": 0.1978,
+      "nmf_score": 0.5347,
+      "lasso_score": 0,
+      "mi_score": 0.1247,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "binary",
+      "potency": 0.1919,
+      "nmf_score": 0.5441,
+      "lasso_score": 0,
+      "mi_score": 0.0956,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "sort",
+      "potency": 0.1905,
+      "nmf_score": 0.4283,
+      "lasso_score": 0,
+      "mi_score": 0.2067,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "tree",
+      "potency": 0.1774,
+      "nmf_score": 0.2297,
+      "lasso_score": 0.1673,
+      "mi_score": 0.1385,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "maximum",
+      "potency": 0.1717,
+      "nmf_score": 0.508,
+      "lasso_score": 0,
+      "mi_score": 0.0645,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "web",
+      "potency": 0.1716,
+      "nmf_score": 0.1526,
+      "lasso_score": 0.2034,
+      "mi_score": 0.1484,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "script reads",
+      "potency": 0.1675,
+      "nmf_score": 0.1164,
+      "lasso_score": 0.2419,
+      "mi_score": 0.1193,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "user",
+      "potency": 0.1618,
+      "nmf_score": 0.1184,
+      "lasso_score": 0.1082,
+      "mi_score": 0.2765,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "create script",
+      "potency": 0.1584,
+      "nmf_score": 0.059,
+      "lasso_score": 0.1257,
+      "mi_score": 0.3013,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "csv",
+      "potency": 0.1584,
+      "nmf_score": 0.3323,
+      "lasso_score": 0,
+      "mi_score": 0.1957,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "queue",
+      "potency": 0.1576,
+      "nmf_score": 0.0562,
+      "lasso_score": 0.3361,
+      "mi_score": 0.0207,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "restful",
+      "potency": 0.1567,
+      "nmf_score": 0,
+      "lasso_score": 0.3286,
+      "mi_score": 0.0841,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "uses",
+      "potency": 0.1566,
+      "nmf_score": 0,
+      "lasso_score": 0.1814,
+      "mi_score": 0.2802,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "operations",
+      "potency": 0.1483,
+      "nmf_score": 0.0636,
+      "lasso_score": 0.1786,
+      "mi_score": 0.1926,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "requests",
+      "potency": 0.1482,
+      "nmf_score": 0.2374,
+      "lasso_score": 0,
+      "mi_score": 0.2565,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "generates random",
+      "potency": 0.1477,
+      "nmf_score": 0.4131,
+      "lasso_score": 0,
+      "mi_score": 0.0793,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "original distribution",
+      "potency": 0.1443,
+      "nmf_score": 0,
+      "lasso_score": 0.3608,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "random",
+      "potency": 0.1436,
+      "nmf_score": 0.3853,
+      "lasso_score": 0,
+      "mi_score": 0.0932,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "solve",
+      "potency": 0.1434,
+      "nmf_score": 0.2932,
+      "lasso_score": 0,
+      "mi_score": 0.1847,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "uses asyncio",
+      "potency": 0.143,
+      "nmf_score": 0,
+      "lasso_score": 0.3048,
+      "mi_score": 0.0702,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "expressions",
+      "potency": 0.142,
+      "nmf_score": 0.3205,
+      "lasso_score": 0,
+      "mi_score": 0.1529,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "order",
+      "potency": 0.1397,
+      "nmf_score": 0.3193,
+      "lasso_score": 0.066,
+      "mi_score": 0.0584,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "calculate",
+      "potency": 0.1396,
+      "nmf_score": 0.2345,
+      "lasso_score": 0,
+      "mi_score": 0.2309,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "specified",
+      "potency": 0.1392,
+      "nmf_score": 0.0969,
+      "lasso_score": 0.1899,
+      "mi_score": 0.1138,
+      "appears_in_topics": 3
+    },
+    {
+      "word": "customer product",
+      "potency": 0.1357,
+      "nmf_score": 0,
+      "lasso_score": 0.3392,
+      "mi_score": 0.0002,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "generate random",
+      "potency": 0.1343,
+      "nmf_score": 0.3888,
+      "lasso_score": 0,
+      "mi_score": 0.0589,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "based",
+      "potency": 0.1335,
+      "nmf_score": 0.1486,
+      "lasso_score": 0.0744,
+      "mi_score": 0.1972,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "server",
+      "potency": 0.1332,
+      "nmf_score": 0.0766,
+      "lasso_score": 0.1726,
+      "mi_score": 0.1373,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "json",
+      "potency": 0.1323,
+      "nmf_score": 0.3932,
+      "lasso_score": 0,
+      "mi_score": 0.0479,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "blocking",
+      "potency": 0.132,
+      "nmf_score": 0,
+      "lasso_score": 0.33,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "regular",
+      "potency": 0.1311,
+      "nmf_score": 0.3256,
+      "lasso_score": 0,
+      "mi_score": 0.1115,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "writes",
+      "potency": 0.1292,
+      "nmf_score": 0.0776,
+      "lasso_score": 0.2568,
+      "mi_score": 0.0107,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "fibonacci",
+      "potency": 0.1292,
+      "nmf_score": 0.4212,
+      "lasso_score": 0,
+      "mi_score": 0.0093,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "arr",
+      "potency": 0.1284,
+      "nmf_score": 0.3207,
+      "lasso_score": 0,
+      "mi_score": 0.1073,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "api",
+      "potency": 0.126,
+      "nmf_score": 0.1706,
+      "lasso_score": 0,
+      "mi_score": 0.2493,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "limit",
+      "potency": 0.1257,
+      "nmf_score": 0.1683,
+      "lasso_score": 0.1185,
+      "mi_score": 0.0926,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "recursion",
+      "potency": 0.1236,
+      "nmf_score": 0.1791,
+      "lasso_score": 0,
+      "mi_score": 0.2328,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "strings",
+      "potency": 0.123,
+      "nmf_score": 0.3253,
+      "lasso_score": 0,
+      "mi_score": 0.0847,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "prime",
+      "potency": 0.1225,
+      "nmf_score": 0.3318,
+      "lasso_score": 0,
+      "mi_score": 0.0764,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "regular expressions",
+      "potency": 0.1214,
+      "nmf_score": 0.3176,
+      "lasso_score": 0,
+      "mi_score": 0.0872,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "binary search",
+      "potency": 0.1177,
+      "nmf_score": 0.3855,
+      "lasso_score": 0,
+      "mi_score": 0.0068,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "balance",
+      "potency": 0.1171,
+      "nmf_score": 0,
+      "lasso_score": 0.2681,
+      "mi_score": 0.033,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "programming",
+      "potency": 0.1152,
+      "nmf_score": 0.2783,
+      "lasso_score": 0,
+      "mi_score": 0.1058,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "compression encryption",
+      "potency": 0.1122,
+      "nmf_score": 0,
+      "lasso_score": 0.2806,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "dynamic programming",
+      "potency": 0.1075,
+      "nmf_score": 0.2585,
+      "lasso_score": 0,
+      "mi_score": 0.0997,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "create program",
+      "potency": 0.1059,
+      "nmf_score": 0.1983,
+      "lasso_score": 0,
+      "mi_score": 0.1549,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "longest",
+      "potency": 0.1041,
+      "nmf_score": 0.2472,
+      "lasso_score": 0,
+      "mi_score": 0.0999,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "subsequence",
+      "potency": 0.1036,
+      "nmf_score": 0.0987,
+      "lasso_score": 0.0649,
+      "mi_score": 0.1602,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "sequence",
+      "potency": 0.1036,
+      "nmf_score": 0.2663,
+      "lasso_score": 0,
+      "mi_score": 0.079,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "audit",
+      "potency": 0.1003,
+      "nmf_score": 0,
+      "lasso_score": 0.2338,
+      "mi_score": 0.0228,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "model",
+      "potency": 0.1002,
+      "nmf_score": 0.04,
+      "lasso_score": 0.1333,
+      "mi_score": 0.1164,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "factorial",
+      "potency": 0.0995,
+      "nmf_score": 0.2651,
+      "lasso_score": 0,
+      "mi_score": 0.0666,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "lists",
+      "potency": 0.0975,
+      "nmf_score": 0.1757,
+      "lasso_score": 0,
+      "mi_score": 0.1492,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "check whether",
+      "potency": 0.0973,
+      "nmf_score": 0.1979,
+      "lasso_score": 0,
+      "mi_score": 0.1263,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "odd",
+      "potency": 0.0971,
+      "nmf_score": 0.2389,
+      "lasso_score": 0,
+      "mi_score": 0.0849,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "users",
+      "potency": 0.096,
+      "nmf_score": 0,
+      "lasso_score": 0.1267,
+      "mi_score": 0.1511,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "algorithm solve",
+      "potency": 0.0944,
+      "nmf_score": 0.1336,
+      "lasso_score": 0,
+      "mi_score": 0.181,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "whether",
+      "potency": 0.094,
+      "nmf_score": 0.2139,
+      "lasso_score": 0,
+      "mi_score": 0.0993,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "calculate total",
+      "potency": 0.094,
+      "nmf_score": 0,
+      "lasso_score": 0.1515,
+      "mi_score": 0.1113,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "tasks",
+      "potency": 0.0937,
+      "nmf_score": 0,
+      "lasso_score": 0.1372,
+      "mi_score": 0.1294,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "longest common",
+      "potency": 0.0935,
+      "nmf_score": 0.1385,
+      "lasso_score": 0.0757,
+      "mi_score": 0.0724,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "calculates",
+      "potency": 0.0934,
+      "nmf_score": 0.0689,
+      "lasso_score": 0,
+      "mi_score": 0.2423,
+      "appears_in_topics": 3
+    },
+    {
+      "word": "client",
+      "potency": 0.0933,
+      "nmf_score": 0,
+      "lasso_score": 0.1649,
+      "mi_score": 0.0911,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "integers",
+      "potency": 0.0922,
+      "nmf_score": 0.123,
+      "lasso_score": 0,
+      "mi_score": 0.1844,
+      "appears_in_topics": 4
+    },
+    {
+      "word": "arr start",
+      "potency": 0.0902,
+      "nmf_score": 0.2347,
+      "lasso_score": 0,
+      "mi_score": 0.0658,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "odd numbers",
+      "potency": 0.0899,
+      "nmf_score": 0.1883,
+      "lasso_score": 0,
+      "mi_score": 0.1112,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "common",
+      "potency": 0.0898,
+      "nmf_score": 0.1641,
+      "lasso_score": 0,
+      "mi_score": 0.1352,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "named",
+      "potency": 0.0897,
+      "nmf_score": 0,
+      "lasso_score": 0.1977,
+      "mi_score": 0.0353,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "generator",
+      "potency": 0.0885,
+      "nmf_score": 0.1776,
+      "lasso_score": 0,
+      "mi_score": 0.1174,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "monitoring logging",
+      "potency": 0.0884,
+      "nmf_score": 0,
+      "lasso_score": 0.0959,
+      "mi_score": 0.1668,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "based access",
+      "potency": 0.0883,
+      "nmf_score": 0,
+      "lasso_score": 0.2153,
+      "mi_score": 0.0071,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "application",
+      "potency": 0.087,
+      "nmf_score": 0.1496,
+      "lasso_score": 0,
+      "mi_score": 0.1404,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "library",
+      "potency": 0.0868,
+      "nmf_score": 0.0799,
+      "lasso_score": 0.1113,
+      "mi_score": 0.0609,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "fibonacci sequence",
+      "potency": 0.0863,
+      "nmf_score": 0.2308,
+      "lasso_score": 0,
+      "mi_score": 0.0567,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "ascending order",
+      "potency": 0.0862,
+      "nmf_score": 0.2125,
+      "lasso_score": 0,
+      "mi_score": 0.0748,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "password",
+      "potency": 0.0862,
+      "nmf_score": 0.039,
+      "lasso_score": 0.1045,
+      "mi_score": 0.1089,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "recursive",
+      "potency": 0.0839,
+      "nmf_score": 0.1467,
+      "lasso_score": 0,
+      "mi_score": 0.1331,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "lowercase letters",
+      "potency": 0.0814,
+      "nmf_score": 0,
+      "lasso_score": 0.1386,
+      "mi_score": 0.0864,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "time",
+      "potency": 0.079,
+      "nmf_score": 0,
+      "lasso_score": 0.05,
+      "mi_score": 0.1968,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "design",
+      "potency": 0.0788,
+      "nmf_score": 0,
+      "lasso_score": 0.1291,
+      "mi_score": 0.0906,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "ascending",
+      "potency": 0.0777,
+      "nmf_score": 0.2125,
+      "lasso_score": 0,
+      "mi_score": 0.0465,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "start",
+      "potency": 0.0771,
+      "nmf_score": 0.2571,
+      "lasso_score": 0,
+      "mi_score": 0,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "files",
+      "potency": 0.0757,
+      "nmf_score": 0.0928,
+      "lasso_score": 0,
+      "mi_score": 0.1595,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "letters",
+      "potency": 0.0755,
+      "nmf_score": 0,
+      "lasso_score": 0.1516,
+      "mi_score": 0.0493,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "connections",
+      "potency": 0.0753,
+      "nmf_score": 0,
+      "lasso_score": 0.1546,
+      "mi_score": 0.0449,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "prime numbers",
+      "potency": 0.0751,
+      "nmf_score": 0.2502,
+      "lasso_score": 0,
+      "mi_score": 0,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "scikit",
+      "potency": 0.0748,
+      "nmf_score": 0,
+      "lasso_score": 0.1507,
+      "mi_score": 0.0486,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "greedy",
+      "potency": 0.0739,
+      "nmf_score": 0.1464,
+      "lasso_score": 0,
+      "mi_score": 0.0998,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "evaluate performance",
+      "potency": 0.0724,
+      "nmf_score": 0,
+      "lasso_score": 0.0955,
+      "mi_score": 0.1141,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "end",
+      "potency": 0.072,
+      "nmf_score": 0.2345,
+      "lasso_score": 0,
+      "mi_score": 0.0053,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "check palindrome",
+      "potency": 0.0719,
+      "nmf_score": 0.0667,
+      "lasso_score": 0,
+      "mi_score": 0.1728,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "command",
+      "potency": 0.0718,
+      "nmf_score": 0,
+      "lasso_score": 0.1746,
+      "mi_score": 0.0064,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "tuples based",
+      "potency": 0.0716,
+      "nmf_score": 0.0788,
+      "lasso_score": 0,
+      "mi_score": 0.16,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "generator yields",
+      "potency": 0.0705,
+      "nmf_score": 0.1022,
+      "lasso_score": 0,
+      "mi_score": 0.1328,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "calculate factorial",
+      "potency": 0.0697,
+      "nmf_score": 0.2012,
+      "lasso_score": 0,
+      "mi_score": 0.031,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "dictionary",
+      "potency": 0.0696,
+      "nmf_score": 0.224,
+      "lasso_score": 0,
+      "mi_score": 0.0079,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "depth search",
+      "potency": 0.0694,
+      "nmf_score": 0.1352,
+      "lasso_score": 0.0502,
+      "mi_score": 0.0294,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "tuples",
+      "potency": 0.0692,
+      "nmf_score": 0.0976,
+      "lasso_score": 0,
+      "mi_score": 0.1331,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "handle",
+      "potency": 0.0687,
+      "nmf_score": 0.1297,
+      "lasso_score": 0,
+      "mi_score": 0.0992,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "specific",
+      "potency": 0.0674,
+      "nmf_score": 0.0487,
+      "lasso_score": 0,
+      "mi_score": 0.1758,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "module",
+      "potency": 0.0673,
+      "nmf_score": 0.0484,
+      "lasso_score": 0,
+      "mi_score": 0.1761,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "ratio evaluate",
+      "potency": 0.0672,
+      "nmf_score": 0,
+      "lasso_score": 0.1209,
+      "mi_score": 0.0629,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "http",
+      "potency": 0.0663,
+      "nmf_score": 0.0945,
+      "lasso_score": 0.0686,
+      "mi_score": 0.0349,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "processing",
+      "potency": 0.0663,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.221,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "www",
+      "potency": 0.0656,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.2186,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "description",
+      "potency": 0.0656,
+      "nmf_score": 0.0905,
+      "lasso_score": 0,
+      "mi_score": 0.1283,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "depth",
+      "potency": 0.0649,
+      "nmf_score": 0.1486,
+      "lasso_score": 0,
+      "mi_score": 0.0676,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "sort dictionaries",
+      "potency": 0.064,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.2135,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "extract",
+      "potency": 0.0639,
+      "nmf_score": 0.0741,
+      "lasso_score": 0,
+      "mi_score": 0.1389,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "calculate even",
+      "potency": 0.0631,
+      "nmf_score": 0.129,
+      "lasso_score": 0,
+      "mi_score": 0.0814,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "contains",
+      "potency": 0.0629,
+      "nmf_score": 0.1003,
+      "lasso_score": 0,
+      "mi_score": 0.1094,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "salary",
+      "potency": 0.0613,
+      "nmf_score": 0,
+      "lasso_score": 0.1531,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "person",
+      "potency": 0.0591,
+      "nmf_score": 0.0729,
+      "lasso_score": 0,
+      "mi_score": 0.124,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "dataset",
+      "potency": 0.0591,
+      "nmf_score": 0,
+      "lasso_score": 0.0637,
+      "mi_score": 0.1121,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "asynchronous",
+      "potency": 0.0581,
+      "nmf_score": 0.0763,
+      "lasso_score": 0,
+      "mi_score": 0.1175,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "alerting user",
+      "potency": 0.0578,
+      "nmf_score": 0,
+      "lasso_score": 0.1357,
+      "mi_score": 0.0117,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "non negative",
+      "potency": 0.0574,
+      "nmf_score": 0.0313,
+      "lasso_score": 0,
+      "mi_score": 0.16,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "calculates even",
+      "potency": 0.0572,
+      "nmf_score": 0.0981,
+      "lasso_score": 0,
+      "mi_score": 0.0926,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "second",
+      "potency": 0.0572,
+      "nmf_score": 0.0832,
+      "lasso_score": 0,
+      "mi_score": 0.1074,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "nth",
+      "potency": 0.0571,
+      "nmf_score": 0.1353,
+      "lasso_score": 0,
+      "mi_score": 0.0549,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "validate",
+      "potency": 0.0571,
+      "nmf_score": 0.1189,
+      "lasso_score": 0,
+      "mi_score": 0.0713,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "text",
+      "potency": 0.0568,
+      "nmf_score": 0.093,
+      "lasso_score": 0,
+      "mi_score": 0.0962,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "learning",
+      "potency": 0.0568,
+      "nmf_score": 0.0306,
+      "lasso_score": 0.0829,
+      "mi_score": 0.048,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "numbers integers",
+      "potency": 0.0565,
+      "nmf_score": 0.1018,
+      "lasso_score": 0,
+      "mi_score": 0.0866,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "create methods",
+      "potency": 0.0558,
+      "nmf_score": 0.0607,
+      "lasso_score": 0,
+      "mi_score": 0.1253,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "https www",
+      "potency": 0.0557,
+      "nmf_score": 0,
+      "lasso_score": 0.1393,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "simple",
+      "potency": 0.0556,
+      "nmf_score": 0.0438,
+      "lasso_score": 0.0794,
+      "mi_score": 0.0356,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "concurrently",
+      "potency": 0.0555,
+      "nmf_score": 0,
+      "lasso_score": 0.0569,
+      "mi_score": 0.1091,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "prints",
+      "potency": 0.0551,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1838,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "tower hanoi",
+      "potency": 0.0548,
+      "nmf_score": 0.0776,
+      "lasso_score": 0,
+      "mi_score": 0.1051,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "requests per",
+      "potency": 0.0543,
+      "nmf_score": 0,
+      "lasso_score": 0.0631,
+      "mi_score": 0.0968,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "task description",
+      "potency": 0.0542,
+      "nmf_score": 0.0882,
+      "lasso_score": 0,
+      "mi_score": 0.0924,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "implement greedy",
+      "potency": 0.0534,
+      "nmf_score": 0.0853,
+      "lasso_score": 0,
+      "mi_score": 0.0927,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "stack",
+      "potency": 0.0529,
+      "nmf_score": 0.0428,
+      "lasso_score": 0,
+      "mi_score": 0.1337,
+      "appears_in_topics": 2
+    },
+    {
+      "word": "knapsack problem",
+      "potency": 0.0521,
+      "nmf_score": 0.0873,
+      "lasso_score": 0,
+      "mi_score": 0.0863,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "writes back",
+      "potency": 0.0516,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1721,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "augmentation",
+      "potency": 0.0516,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1719,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "divisible",
+      "potency": 0.0513,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1711,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "mid",
+      "potency": 0.0511,
+      "nmf_score": 0.1702,
+      "lasso_score": 0,
+      "mi_score": 0,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "extract specific",
+      "potency": 0.051,
+      "nmf_score": 0,
+      "lasso_score": 0.0637,
+      "mi_score": 0.0851,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "finds",
+      "potency": 0.0508,
+      "nmf_score": 0.1235,
+      "lasso_score": 0,
+      "mi_score": 0.0458,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "represent simple",
+      "potency": 0.0508,
+      "nmf_score": 0,
+      "lasso_score": 0.0468,
+      "mi_score": 0.1067,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "prefix",
+      "potency": 0.0507,
+      "nmf_score": 0.061,
+      "lasso_score": 0,
+      "mi_score": 0.1079,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "features",
+      "potency": 0.0504,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.168,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "messages",
+      "potency": 0.0502,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1672,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "arr mid",
+      "potency": 0.0502,
+      "nmf_score": 0.0822,
+      "lasso_score": 0,
+      "mi_score": 0.085,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "authorization",
+      "potency": 0.0499,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1664,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "graph dijkstra",
+      "potency": 0.0498,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.166,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "term",
+      "potency": 0.0497,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1656,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "gcd",
+      "potency": 0.0493,
+      "nmf_score": 0,
+      "lasso_score": 0.0822,
+      "mi_score": 0.0548,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "built",
+      "potency": 0.0491,
+      "nmf_score": 0.0709,
+      "lasso_score": 0,
+      "mi_score": 0.0927,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "filename",
+      "potency": 0.0491,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1638,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "learning model",
+      "potency": 0.0491,
+      "nmf_score": 0,
+      "lasso_score": 0.1226,
+      "mi_score": 0,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "start end",
+      "potency": 0.0489,
+      "nmf_score": 0.1568,
+      "lasso_score": 0,
+      "mi_score": 0.0061,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "creating",
+      "potency": 0.0488,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1627,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "recursive approach",
+      "potency": 0.0483,
+      "nmf_score": 0.0674,
+      "lasso_score": 0,
+      "mi_score": 0.0935,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "executes tasks",
+      "potency": 0.0483,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.161,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "develop rate",
+      "potency": 0.0482,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1607,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "calculation",
+      "potency": 0.0482,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1608,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "recursive calculate",
+      "potency": 0.0481,
+      "nmf_score": 0.1604,
+      "lasso_score": 0,
+      "mi_score": 0,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "flexible",
+      "potency": 0.0479,
+      "nmf_score": 0,
+      "lasso_score": 0.1191,
+      "mi_score": 0.001,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "test",
+      "potency": 0.0477,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1589,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "warning",
+      "potency": 0.0475,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1583,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "detection",
+      "potency": 0.0474,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1582,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "backtracking",
+      "potency": 0.0471,
+      "nmf_score": 0.1106,
+      "lasso_score": 0,
+      "mi_score": 0.0463,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "authentication authorization",
+      "potency": 0.0471,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1569,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "solution",
+      "potency": 0.0471,
+      "nmf_score": 0.0784,
+      "lasso_score": 0.059,
+      "mi_score": 0,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "without sorting",
+      "potency": 0.0471,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1571,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "based length",
+      "potency": 0.047,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.1568,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "genre",
+      "potency": 0.047,
+      "nmf_score": 0,
+      "lasso_score": 0.1129,
+      "mi_score": 0.0063,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "specified limit",
+      "potency": 0.047,
+      "nmf_score": 0.1031,
+      "lasso_score": 0,
+      "mi_score": 0.0536,
+      "appears_in_topics": 1
+    },
+    {
+      "word": "limiter limits",
+      "potency": 0.0468,
+      "nmf_score": 0,
+      "lasso_score": 0,
+      "mi_score": 0.156,
+      "appears_in_topics": 0
+    },
+    {
+      "word": "email",
+      "potency": 0.0467,
+      "nmf_score": 0.0974,
+      "lasso_score": 0,
+      "mi_score": 0.0582,
+      "appears_in_topics": 1
+    }
+  ]
+}

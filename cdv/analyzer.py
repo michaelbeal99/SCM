@@ -19,7 +19,7 @@ from typing import Optional
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF
-from sklearn.linear_model import LassoCV
+from sklearn.linear_model import LassoLarsCV
 from sklearn.feature_selection import mutual_info_regression
 from sklearn.preprocessing import StandardScaler
 
@@ -57,7 +57,27 @@ class CDVAnalyzer:
             "hasattr", "getattr", "setattr", "isinstance", "issubclass",
             "callable", "dir", "vars", "help", "id", "hash", "repr", "str",
         }
-        self.known = self.layer1 | self.layer2
+        # General English stopwords to filter out
+        self.stopwords = {
+            "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
+            "have", "has", "had", "having", "do", "does", "did", "doing",
+            "will", "would", "could", "should", "may", "might", "must", "shall", "can",
+            "i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them",
+            "my", "your", "his", "its", "our", "their", "mine", "yours", "hers", "ours", "theirs",
+            "to", "of", "in", "for", "on", "with", "at", "by", "from", "as", "into",
+            "about", "than", "then", "that", "this", "these", "those",
+            "not", "no", "nor", "so", "if", "but", "or", "and",
+            "each", "every", "all", "both", "few", "more", "most", "other", "some", "such",
+            "only", "own", "same", "just", "very", "also", "too", "very", "really",
+            "here", "there", "when", "where", "why", "how", "which", "who", "whom", "what",
+            "over", "under", "again", "further", "once", "up", "down", "out", "off",
+            "now", "new", "one", "two", "first", "last", "long", "great", "little",
+            "before", "after", "above", "below", "between", "through", "during",
+            "write", "please", "need", "want", "like", "use", "make", "take", "give",
+            "using", "given", "used", "takes", "returns", "return", "called",
+            "must", "should", "would", "could", "able", "way",
+        }
+        self.known = self.layer1 | self.layer2 | self.stopwords
 
         # State
         self.corpus: list[str] = []
@@ -65,7 +85,7 @@ class CDVAnalyzer:
         self.tfidf_matrix = None
         self.nmf: Optional[NMF] = None
         self.nmf_topics: list[list[tuple[str, float]]] = []
-        self.lasso: Optional[LassoCV] = None
+        self.lasso: Optional[LassoLarsCV] = None
         self.lasso_words: list[tuple[str, float]] = []
         self.mi_scores: list[tuple[str, float]] = []
         self.final_cdv: list[dict] = []
@@ -109,7 +129,7 @@ class CDVAnalyzer:
     # Step 3: TF-IDF matrix
     # ------------------------------------------------------------------
 
-    def build_tfidf(self, stripped_corpus: list[str], max_features: int = 5000):
+    def build_tfidf(self, stripped_corpus: list[str], max_features: int = 2000):
         """Build TF-IDF matrix from the stripped corpus."""
         self.vectorizer = TfidfVectorizer(
             max_features=max_features,
@@ -149,17 +169,14 @@ class CDVAnalyzer:
     # ------------------------------------------------------------------
 
     def run_lasso(self, target_feature: Optional[str] = None):
-        """Run LassoCV to find minimum word set that predicts code output.
+        """Run LassoLarsCV to find minimum word set.
 
-        Since we don't have a direct code-output target for each corpus entry,
-        we use the TF-IDF scores as a proxy: Lasso identifies the sparsest
-        set of words that can reconstruct the TF-IDF matrix.
+        LassoLarsCV is much faster than LassoCV for high-dimensional data.
         """
-        self.lasso = LassoCV(
+        from sklearn.linear_model import LassoLarsCV
+        self.lasso = LassoLarsCV(
             cv=5,
-            random_state=42,
-            max_iter=2000,
-            n_alphas=50,
+            max_iter=500,
         )
 
         # Use the mean TF-IDF vector as a proxy target
