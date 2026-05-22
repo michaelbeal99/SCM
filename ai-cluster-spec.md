@@ -524,15 +524,15 @@ llm-cluster/
 Phase 1 must be fully complete before Hermes begins Phase 2. Hermes verifies all Phase 1 boxes as the first action of its first session (see SOP §13).
 
 ### Phase 2 — Core Pipeline
-- [ ] Project structure initialized (dirs + venv + .gitignore + requirements.txt)
-- [ ] Spec and SOP placed in project root
-- [ ] Pydantic schemas for all contracts
-- [ ] Dispatcher Mode 1 (English → JSON) working
-- [ ] Python specialist running via Ollama
-- [ ] Placeholder Scanner (deterministic)
-- [ ] Dispatcher Mode 2 (NL generation)
-- [ ] Assembler (deterministic)
-- [ ] End-to-end: English → Python code working
+- [x] Project structure initialized (dirs + venv + .gitignore + requirements.txt)
+- [x] Spec and SOP placed in project root
+- [x] Pydantic schemas for all contracts
+- [x] Dispatcher Mode 1 (English → JSON) working
+- [x] Python specialist running via Ollama
+- [x] Placeholder Scanner (deterministic)
+- [x] Dispatcher Mode 2 (NL generation)
+- [x] Assembler (deterministic)
+- [x] End-to-end: English → Python code working
 
 ### Phase 3 — Specialists + Tools
 - [ ] SQL specialist
