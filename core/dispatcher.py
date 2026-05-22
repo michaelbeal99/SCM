@@ -291,3 +291,101 @@ class Dispatcher:
             routing_method="model",
             confidence=0.5,
         )
+
+    # -- Mode 2: NL generation ---------------------------------------------
+
+    def generate_nl(self, requests: list) -> "dict[str, str]":
+        """Generate English fragments for batched NL requests.
+
+        Args:
+            requests: List of NLRequest objects from the Scanner.
+
+        Returns:
+            Mapping of placeholder_id → generated English text.
+        """
+        from .schemas import NLRequest
+
+        if not requests:
+            return {}
+
+        # Build a batched prompt with all requests
+        items = []
+        for r in requests:
+            items.append(
+                f"ID: {r.placeholder_id}\n"
+                f"Type: {r.req}\n"
+                f"Context: {r.ctx}\n"
+                f"Tone: {r.tone}\n"
+                f"Style: {r.style}\n"
+                f"Max tokens: {r.max}\n"
+                f"Intent: {r.intent_context or 'N/A'}\n"
+            )
+
+        prompt = MODE2_PROMPT.format(
+            batch="\n---\n".join(items),
+            count=len(requests),
+        )
+
+        try:
+            response = ollama.generate(
+                model=self.model,
+                prompt=prompt,
+                options={"temperature": 0.3, "num_predict": 512},
+            )
+            raw = response["response"].strip()
+            return self._parse_fragments(raw, requests)
+        except Exception:
+            # Fallback: use context as the fragment directly
+            return {r.placeholder_id: r.ctx for r in requests}
+
+    def _parse_fragments(
+        self, raw: str, requests: list
+    ) -> "dict[str, str]":
+        """Parse the model's NL generation response into a fragment map."""
+        fragments: dict[str, str] = {}
+
+        # Try JSON parsing first
+        raw_clean = re.sub(r"^```(?:json)?\s*", "", raw)
+        raw_clean = re.sub(r"\s*```$", "", raw_clean)
+        try:
+            data = json.loads(raw_clean)
+            if isinstance(data, dict):
+                for k, v in data.items():
+                    if k.startswith("__NL_"):
+                        fragments[k] = str(v)
+        except json.JSONDecodeError:
+            pass
+
+        # If JSON parsing didn't fill everything, try line-based fallback
+        if not fragments:
+            current_id = None
+            current_text: list[str] = []
+            for line in raw.split("\n"):
+                line = line.strip()
+                id_match = re.match(r"^(__NL_\d+__)\s*[:=-]\s*(.+)", line)
+                if id_match:
+                    if current_id:
+                        fragments[current_id] = " ".join(current_text)
+                    current_id = id_match.group(1)
+                    current_text = [id_match.group(2)]
+                elif current_id and line:
+                    current_text.append(line)
+            if current_id:
+                fragments[current_id] = " ".join(current_text)
+
+        # Always fill any missing IDs with context fallback
+        for r in requests:
+            if r.placeholder_id not in fragments:
+                fragments[r.placeholder_id] = r.ctx
+
+        return fragments
+
+
+MODE2_PROMPT = """You fill in natural-language placeholders in generated code.
+
+For each placeholder ID below, generate the appropriate English text.
+Output as a JSON object mapping ID to text. No markdown, no explanation.
+
+{batch}
+
+Generate exactly {count} fragments as JSON: {{"__NL_0__": "...", "__NL_1__": "..."}}"""
